@@ -1,0 +1,3 @@
+D:\[SA-MP] Brasil Vida Nova\pawno\include\a_samp.inc(265) : èäåíòèôèêàòîð íå èñïîëüçóåòñÿ: "SAMP_INCLUDES_VERSION"
+Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2016, ITB CompuPhase
+
