@@ -140,3 +140,99 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [09:53:56] [connection] incoming connection: 127.0.0.1:64875 id: 0
 [09:53:56] [join] The_Julio has joined the server (0:127.0.0.1)
 [09:55:32] sscanf warning (`(null)`): "Include / plugin mismatch, please recompile your script for the latest features."
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[10:10:43] filterscripts = ""  (string)
+[10:10:43] 
+[10:10:43] Server Plugins
+[10:10:43] --------------
+[10:10:43]  Loading plugin: sscanf
+[10:10:43] 
+
+[10:10:43]  ===============================
+
+[10:10:43]       sscanf plugin loaded.     
+
+[10:10:43]         Version:  2.11.4        
+
+[10:10:43]    (c) 2022 Alex "Y_Less" Cole  
+
+[10:10:43]  ===============================
+
+[10:10:43]   Loaded.
+[10:10:43]  Loading plugin: streamer
+[10:10:43] 
+
+*** Streamer Plugin v2.9.5 by Incognito loaded ***
+
+[10:10:43]   Loaded.
+[10:10:43]  Loading plugin: discord-connector
+[10:10:43]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[10:10:43]   Loaded.
+[10:10:43]  Loaded 3 plugins.
+
+[10:10:44] 
+[10:10:44] Filterscripts
+[10:10:44] ---------------
+[10:10:44]   Loaded 0 filterscripts.
+
+[10:10:44] Number of vehicle models: 0
+[10:16:04] [connection] 127.0.0.1:60396 requests connection cookie.
+[10:16:05] [connection] incoming connection: 127.0.0.1:60396 id: 0
+[10:16:05] [join] The_Julio has joined the server (0:127.0.0.1)
+[10:17:03] [part] The_Julio has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[10:41:39] filterscripts = ""  (string)
+[10:41:39] 
+[10:41:39] Server Plugins
+[10:41:39] --------------
+[10:41:39]  Loading plugin: sscanf
+[10:41:39] 
+
+[10:41:39]  ===============================
+
+[10:41:39]       sscanf plugin loaded.     
+
+[10:41:39]         Version:  2.11.4        
+
+[10:41:39]    (c) 2022 Alex "Y_Less" Cole  
+
+[10:41:39]  ===============================
+
+[10:41:39]   Loaded.
+[10:41:39]  Loading plugin: streamer
+[10:41:39] 
+
+*** Streamer Plugin v2.9.5 by Incognito loaded ***
+
+[10:41:39]   Loaded.
+[10:41:39]  Loading plugin: discord-connector
+[10:41:40]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[10:41:40]   Loaded.
+[10:41:40]  Loaded 3 plugins.
+
+[10:41:40] 
+[10:41:40] Filterscripts
+[10:41:40] ---------------
+[10:41:40]   Loaded 0 filterscripts.
+
+[10:41:40] Number of vehicle models: 0
+[10:42:02] [connection] 127.0.0.1:57656 requests connection cookie.
+[10:42:03] [connection] incoming connection: 127.0.0.1:57656 id: 0
+[10:42:03] [join] The_Julio has joined the server (0:127.0.0.1)
+[10:46:00] sscanf warning (`(null)`): "Include / plugin mismatch, please recompile your script for the latest features."
