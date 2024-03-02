@@ -1,12 +1,3 @@
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-//
-//                             CREDITOS AO
-//                              DEVSCRIPT
-//
-//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-
-
 //___________INCLUDES________________//
 #include <a_samp>
 #include <DOF2>
@@ -82,8 +73,8 @@ new Bandido[MAX_PLAYERS] = 0;
 new Policial_Equipado[MAX_PLAYERS] = 0;
 
 
-#define Garagem_Bandidos                  48
-#define Garagem_Policiais                 49
+#define Garagem_Bandido                   48
+#define Garagem_Policial                  49
 
 #define Skins_Policiais                   51
 #define Skins_Bandidos                    52
@@ -148,32 +139,38 @@ main()
 
 public OnGameModeInit()
 {
-    // ManualVehicleEngineAndLights();
-    ShowPlayerMarkers(0);
+	// ManualVehicleEngineAndLights();
+  ShowPlayerMarkers(0);
 	ShowNameTags(1);
 	UsePlayerPedAnims();
 	DisableInteriorEnterExits();
  	EnableStuntBonusForAll(0);
-    SetGameModeText("BETA");
+  SetGameModeText("BETA");
 	
 	CreatePickup(19132, 1, 3406.7095, -1677.8269, 7.5313, 0); //LOBBY
-    Create3DTextLabel("{836FFF}Five Lobby\n{FFFFFF}Use {836FFF}/escolher {FFFFFF}Para Ser Policial ou Bandido", COR_AMARELO, 3406.7095,-1677.8269,7.5313, 58.0685, 0, 0); //LOBBY
-    Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /garagem", -1, 2536.6902, -920.2032, 86.6194, 30.0, 0, 0); //GARAGEM BANDIDOS
-    CreatePickup(19134, 23, 2536.6902, -920.2032, 86.6194); //GARAGEM BANDIDOS
+  Create3DTextLabel("{836FFF}Five Lobby\n{FFFFFF}Use {836FFF}/escolher {FFFFFF}Para Ser Policial ou Bandido", COR_AMARELO, 3406.7095,-1677.8269,7.5313, 58.0685, 0, 0); //LOBBY
+  Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /garagem", -1, 2536.6902, -920.2032, 86.6194, 30.0, 0, 0); //GARAGEM BANDIDOS
+  CreatePickup(19134, 23, 2536.6902, -920.2032, 86.6194); //GARAGEM BANDIDOS
 
 	Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /garagem", -1, 1588.4276, -1692.5383, 6.2188, 30.0, 0, 0); //GARAGEM POLICIAIS
-    CreatePickup(19134, 23, 1588.4276, -1692.5383, 6.2188); //GARAGEM POLICIAIS
+  CreatePickup(19134, 23, 1588.4276, -1692.5383, 6.2188); //GARAGEM POLICIAIS
 
-	Create3DTextLabel("{FFFFFF}DELEGACIA\n{836FFF}Digite /entrar Para Entrar Na DELEGACIA",0xFFA500AA,1555.5005,-1675.6212,16.1953,10.0,0);
-    AddStaticPickup(1318, 24, 1555.5005,-1675.6212,16.1953);//ENTRAR DELEGACIA
+	Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /guardarv", -1, 1585.6941,-1677.2054,5.8978, 30.0, 0, 0); //GARAGEM POLICIAIS
+  CreatePickup(19134, 23, 1585.6941,-1677.2054,5.8978); //GARAGEM POLICIAIS
+
+	Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /guardarv", -1, 2534.2649, -911.4888, 86.6154, 30.0, 0, 0); //GARAGEM POLICIAIS
+  CreatePickup(19134, 23, 2534.2649, -911.4888, 86.6154); //GARAGEM POLICIAIS
+
+	Create3DTextLabel("{FFFFFF}DELEGACIA\n{836FFF}Digite /entrar para entrar na DELEGACIA",0xFFA500AA,1555.5005,-1675.6212,16.1953,10.0,0);
+  AddStaticPickup(1318, 24, 1555.5005,-1675.6212,16.1953);//ENTRAR DELEGACIA
     
-    Create3DTextLabel("{FFFFFF}DELEGACIA\n{836FFF}Digite /sair ou aperte F Para sair da DELEGACIA",0xFFA500AA,651.6869,2539.6213,-89.4551,10.0,0);
-    AddStaticPickup(1318, 24, 651.6869,2539.6213,-89.4551);// SAIR DELEGACIA
+  Create3DTextLabel("{FFFFFF}DELEGACIA\n{836FFF}Digite /sair ou aperte F Para sair da DELEGACIA",0xFFA500AA,651.6869,2539.6213,-89.4551,10.0,0);
+  AddStaticPickup(1318, 24, 651.6869,2539.6213,-89.4551);// SAIR DELEGACIA
     
     
-    statuschannel = DCC_FindChannelById("1213156618829701200");
-    new DCC_Embed:embed = DCC_CreateEmbed("**Servidor Onlline**", "IP: 51.81.166.66:23698", "", "", 129310, "Five Fugas 2024", "https://cdn.discordapp.com/attachments/988186288731607090/995891326937739264/IMG_20220711_000621.png", "https://cdn.discordapp.com/attachments/988186288731607090/995891326937739264/IMG_20220711_000621.png", "https://cdn.discordapp.com/attachments/988186288731607090/998582721649594469/online.png");
-    DCC_SendChannelEmbedMessage(statuschannel, embed, "");
+  statuschannel = DCC_FindChannelById("1213156618829701200");
+  new DCC_Embed:embed = DCC_CreateEmbed("**Servidor Onlline**", "IP: 51.81.166.66:23698", "", "", 129310, "Five Fugas 2024", "https://cdn.discordapp.com/attachments/988186288731607090/995891326937739264/IMG_20220711_000621.png", "https://cdn.discordapp.com/attachments/988186288731607090/995891326937739264/IMG_20220711_000621.png", "https://cdn.discordapp.com/attachments/988186288731607090/998582721649594469/online.png");
+  DCC_SendChannelEmbedMessage(statuschannel, embed, "");
 	
 	
 	
@@ -2204,48 +2201,48 @@ public OnGameModeInit()
 
 public OnGameModeExit()
 {
-    DOF2_Exit();
-    return 1;
+	DOF2_Exit();
+  return 1;
 }
 
 public OnPlayerRequestClass(playerid, classid)
 {
-    format(arquivo, sizeof(arquivo), PASTA_CONTAS, PlayerName(playerid));
-    if(!DOF2_FileExists(arquivo))
-    {
-        EstaRegistrado[playerid] = false;
-        VSenha[playerid] = "-1";
-        VGenero[playerid] = -1;
-        PlayerTextDrawSetString(playerid, TextdrawRegistro[6][playerid], PlayerName(playerid));
-        for(new i; i < 10; i++)
+	format(arquivo, sizeof(arquivo), PASTA_CONTAS, PlayerName(playerid));
+	if(!DOF2_FileExists(arquivo))
+  {
+		EstaRegistrado[playerid] = false;
+    VSenha[playerid] = "-1";
+    VGenero[playerid] = -1;
+    PlayerTextDrawSetString(playerid, TextdrawRegistro[6][playerid], PlayerName(playerid));
+		for(new i; i < 10; i++)
 		{
 			PlayerTextDrawShow(playerid, TextdrawRegistro[i][playerid]);
 		}
 		SelectTextDraw(playerid, 0xFF0000AA);
-    }
-    else if(DOF2_FileExists(arquivo))
-    {
-        EstaRegistrado[playerid] = true;
-        VSenha[playerid] = "-1";
-        TentativasSenha[playerid] = 0;
-        PlayerTextDrawSetString(playerid, TextdrawRegistro[6][playerid], PlayerName(playerid));
-        for(new i; i < 10; i++)
+  }
+  else if(DOF2_FileExists(arquivo))
+	{
+		EstaRegistrado[playerid] = true;
+    VSenha[playerid] = "-1";
+    TentativasSenha[playerid] = 0;
+    PlayerTextDrawSetString(playerid, TextdrawRegistro[6][playerid], PlayerName(playerid));
+    for(new i; i < 10; i++)
 		{
 			PlayerTextDrawShow(playerid, TextdrawRegistro[i][playerid]);
 		}
 		SelectTextDraw(playerid, 0xFF0000AA);
-    }
-    LimparChat(playerid, 30);
-    TogglePlayerSpectating(playerid, 1);
-    InterpolateCameraPos(playerid, 828.892395, -1470.234985, 159.147048, 1855.578247, -1356.315795, 106.570388, 90000);
-    InterpolateCameraLookAt(playerid, 833.859008, -1469.715087, 158.897155, 1860.529296, -1355.671020, 106.302513, 90000);
-    SetPlayerColor(playerid, 0xFFFF00AA);
-    return 1;
+  }
+  LimparChat(playerid, 30);
+  TogglePlayerSpectating(playerid, 1);
+  InterpolateCameraPos(playerid, 828.892395, -1470.234985, 159.147048, 1855.578247, -1356.315795, 106.570388, 90000);
+  InterpolateCameraLookAt(playerid, 833.859008, -1469.715087, 158.897155, 1860.529296, -1355.671020, 106.302513, 90000);
+  SetPlayerColor(playerid, 0xFFFF00AA);
+  return 1;
 }
 
 public OnPlayerConnect(playerid)
 {
-    //================= Favela NataaNRP - Remoção Objetos ======================//
+  //================= Favela NataaNRP - Remoção Objetos ======================//
 	RemoveBuildingForPlayer(playerid, 3285, 2449.520, -961.898, 81.007, 0.250);
 	RemoveBuildingForPlayer(playerid, 3300, 2449.520, -961.898, 81.007, 0.250);
 	RemoveBuildingForPlayer(playerid, 3283, 2466.290, -959.195, 79.664, 0.250);
@@ -2271,71 +2268,71 @@ public OnPlayerConnect(playerid)
 
 
 	//REMOVE ALGUNS POSTES
-    RemoveBuildingForPlayer(playerid, 4081, 1734.3047, -1560.7109, 18.8828, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1516.1641, -1591.6563, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1721.6328, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1705.2734, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1229, 1524.2188, -1693.9688, 14.1094, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1688.0859, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1229, 1524.2188, -1673.7109, 14.1094, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1668.0781, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1685.4219, -1661.0781, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1762.7891, -1732.8281, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1736.5313, -1731.7969, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1294, 1788.2031, -1727.9063, 16.9063, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1647.6406, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1685.3672, -1634.1875, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1621.9609, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1525.3828, -1611.1563, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1528.9531, -1605.8594, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1685.3516, -1607.3047, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1690.2813, -1607.8438, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1294, 1557.5547, -1588.3359, 16.9063, 0.25);
-    RemoveBuildingForPlayer(playerid, 1294, 1626.4609, -1588.3359, 16.9063, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1664.9063, -1593.1250, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1646.6016, -1591.6875, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1658.5313, -1583.3203, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1676.7813, -1591.6094, 15.5859, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1693.6719, -1647.4531, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1693.6719, -1620.1797, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1703.9063, -1593.6719, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1294, 1696.2422, -1588.3359, 16.9063, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1709.5000, -1597.6484, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1733.1250, -1601.3125, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1744.4922, -1598.3359, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 3998, 1734.3047, -1560.7109, 18.8828, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1753.4453, -1610.8281, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1769.0234, -1610.1641, 16.4219, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1765.0781, -1604.1875, 15.6250, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1822.5703, -1763.2578, 15.5859, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1832.0703, -1756.5156, 16.3594, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1832.8359, -1751.5078, 15.5859, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1820.8359, -1741.1484, 15.5781, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1825.9297, -1697.5625, 16.3438, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1825.8516, -1667.0781, 16.3438, 0.25);
-    RemoveBuildingForPlayer(playerid, 1226, 1817.5156, -1623.8359, 16.3594, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1822.1563, -1623.5156, 15.6406, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1810.2031, -1612.9063, 15.6406, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1833.0234, -1611.4766, 15.6406, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1821.0313, -1601.2344, 15.6406, 0.25);
-    RemoveBuildingForPlayer(playerid, 1297, 1317.1016, -1587.1797, 15.8906, 0.25);
-    RemoveBuildingForPlayer(playerid, 1297, 1318.8672, -1551.3359, 15.8906, 0.25);
-    RemoveBuildingForPlayer(playerid, 1297, 1336.6953, -1508.9922, 15.8906, 0.25);
-    RemoveBuildingForPlayer(playerid, 1297, 1356.6328, -1462.9453, 15.8906, 0.25);
-    RemoveBuildingForPlayer(playerid, 1290, 1348.0078, -1447.9219, 18.2266, 0.25);
-    RemoveBuildingForPlayer(playerid, 1297, 1361.2734, -1430.7734, 15.8906, 0.25);
-    RemoveBuildingForPlayer(playerid, 1312, 1343.8594, -1426.0156, 16.5469, 0.25);
-    RemoveBuildingForPlayer(playerid, 1283, 1358.4766, -1416.2734, 15.5859, 0.25);
+  RemoveBuildingForPlayer(playerid, 4081, 1734.3047, -1560.7109, 18.8828, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1516.1641, -1591.6563, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1721.6328, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1705.2734, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1229, 1524.2188, -1693.9688, 14.1094, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1688.0859, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1229, 1524.2188, -1673.7109, 14.1094, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1668.0781, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1685.4219, -1661.0781, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1762.7891, -1732.8281, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1736.5313, -1731.7969, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1294, 1788.2031, -1727.9063, 16.9063, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1647.6406, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1685.3672, -1634.1875, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1524.8281, -1621.9609, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1525.3828, -1611.1563, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1528.9531, -1605.8594, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1685.3516, -1607.3047, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1690.2813, -1607.8438, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1294, 1557.5547, -1588.3359, 16.9063, 0.25);
+  RemoveBuildingForPlayer(playerid, 1294, 1626.4609, -1588.3359, 16.9063, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1664.9063, -1593.1250, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1646.6016, -1591.6875, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1658.5313, -1583.3203, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1676.7813, -1591.6094, 15.5859, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1693.6719, -1647.4531, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1693.6719, -1620.1797, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1703.9063, -1593.6719, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1294, 1696.2422, -1588.3359, 16.9063, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1709.5000, -1597.6484, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1733.1250, -1601.3125, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1744.4922, -1598.3359, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 3998, 1734.3047, -1560.7109, 18.8828, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1753.4453, -1610.8281, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1769.0234, -1610.1641, 16.4219, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1765.0781, -1604.1875, 15.6250, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1822.5703, -1763.2578, 15.5859, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1832.0703, -1756.5156, 16.3594, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1832.8359, -1751.5078, 15.5859, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1820.8359, -1741.1484, 15.5781, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1825.9297, -1697.5625, 16.3438, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1825.8516, -1667.0781, 16.3438, 0.25);
+  RemoveBuildingForPlayer(playerid, 1226, 1817.5156, -1623.8359, 16.3594, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1822.1563, -1623.5156, 15.6406, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1810.2031, -1612.9063, 15.6406, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1833.0234, -1611.4766, 15.6406, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1821.0313, -1601.2344, 15.6406, 0.25);
+  RemoveBuildingForPlayer(playerid, 1297, 1317.1016, -1587.1797, 15.8906, 0.25);
+  RemoveBuildingForPlayer(playerid, 1297, 1318.8672, -1551.3359, 15.8906, 0.25);
+  RemoveBuildingForPlayer(playerid, 1297, 1336.6953, -1508.9922, 15.8906, 0.25);
+  RemoveBuildingForPlayer(playerid, 1297, 1356.6328, -1462.9453, 15.8906, 0.25);
+  RemoveBuildingForPlayer(playerid, 1290, 1348.0078, -1447.9219, 18.2266, 0.25);
+  RemoveBuildingForPlayer(playerid, 1297, 1361.2734, -1430.7734, 15.8906, 0.25);
+  RemoveBuildingForPlayer(playerid, 1312, 1343.8594, -1426.0156, 16.5469, 0.25);
+  RemoveBuildingForPlayer(playerid, 1283, 1358.4766, -1416.2734, 15.5859, 0.25);
 
-    CarregarTextdrawPlayer(playerid);
-    VerificarLogin[playerid] = false;
+  CarregarTextdrawPlayer(playerid);
+  VerificarLogin[playerid] = false;
 	PlayAudioStreamForPlayer(playerid, "http://live.hunter.fm/sertanejo_high");
 
 	joinquit += 1;
 	new name[MAX_PLAYER_NAME + 1];
-    GetPlayerName(playerid, name, sizeof(name));
-    new plrIP[20];
-    GetPlayerIp(playerid, plrIP, sizeof(plrIP));
+  GetPlayerName(playerid, name, sizeof(name));
+  new plrIP[20];
+  GetPlayerIp(playerid, plrIP, sizeof(plrIP));
 	new log05[40];
 	format(log05, sizeof log05, "%s Entrou No Servidor", name, plrIP);
 	DCC_SendChannelMessage(joinquitlog, log05);
@@ -2355,7 +2352,7 @@ public OnPlayerDisconnect(playerid, reason)
 
     if(VerificarLogin[playerid] == true)
     {
-            SalvarDados(playerid);
+			SalvarDados(playerid);
     }
     return 1;
 }
@@ -2662,82 +2659,104 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
       }
     }
   }
-	if(dialogid == Garagem_Policiais)
+	if(dialogid == Garagem_Policial)
 	{
 		if(response)
 		{
-			if(!listitem)
-			{
-				ShowPlayerDialog(playerid, 49, 2, "GARAGEM - VIATURAS", "{ff4848}Viatura LS\n{ff4848}Viatura SF\n{FF4848}Viatura LV\n{FF4848}Viatura FBI\n{FF4848}Blindado\nRocam\nHelicoptero", "Selecionar", "Fechar");
-			}
-			if(listitem == 1)
-			{
-				if(!IsPlayerInAnyVehicle(playerid))
-				{
-					return SendClientMessage(playerid, COR_VERMELHO, "[Five] Voce Nao Esta Dentro De Um Viatura");
-				}
-				SendClientMessage(playerid, COR_ROXOCLARO, "Viatura Guardado Com Sucesso");
-				new var0 = GetPlayerVehicleID(playerid);
-				DestroyVehicle(var0);
-			}
-		}
-	}
-	if(dialogid == 49)
-	{
-		if(response)
-		{
-			if(!listitem)
+			if(listitem == 0)
 			{
 				new VTR_LS;
 				VTR_LS = CreateVehicle(596, 1601.8549,-1704.2041,5.5705,89.6262, 1, 1, 0);
         PutPlayerInVehicle(playerid, VTR_LS, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
 			if(listitem == 1)
 			{
 				new VTR_SF;
 				VTR_SF = CreateVehicle(597, 1600.9486,-1700.1726,5.5705, 90.1010, 1, 1, 0);
         PutPlayerInVehicle(playerid, VTR_SF, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
       if(listitem == 2)
 			{
 				new VTR_LV;
 				VTR_LV = CreateVehicle(598, 1601.2448, -1696.0468, 5.5700, 90.6570, 1, 1, 0);
         PutPlayerInVehicle(playerid, VTR_LV, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
       if(listitem == 3)
 			{
 				new VTR_FBI;
 				VTR_FBI = CreateVehicle(490, 1601.0087, -1683.9307, 6.0225, 89.8976, 1, 1, 0); // 0, -1, 0
         PutPlayerInVehicle(playerid, VTR_FBI, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
       if(listitem == 4)
 			{
 				new Blindado;
 				Blindado = CreateVehicle(427, 1601.6797, -1692.0331, 5.5701, 89.7597, 1, 1, 0);
         PutPlayerInVehicle(playerid, Blindado, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
       if(listitem == 5)
 			{
 				new Rocam;
 				Rocam = CreateVehicle(523, 1601.8209, -1687.7991, 5.5705, 91.5505, 1, 1, 0);
         PutPlayerInVehicle(playerid, Rocam, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
       if(listitem == 6)
 			{
 				new Helicoptero;
 				Helicoptero = CreateVehicle(497, 1550.4500, -1609.7612, 13.5594, 272.5140, 1, 1, 0);
         PutPlayerInVehicle(playerid, Helicoptero, 0);
-				SendClientMessage(playerid, COR_ROXOCLARO, "[Five] Viatura Retirado da Garagem!");
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
+			}
+		}
+		return true;
+	}
+	if(dialogid == Garagem_Bandido)
+	{
+		if(response)
+		{
+			if(listitem == 0)
+			{
+				new CarSultan;
+				CarSultan = CreateVehicle(560, 2533.8132,-913.4097,86.3253,176.4708,0, -1, 0);
+        PutPlayerInVehicle(playerid, CarSultan, 0);
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
+			}
+			if(listitem == 1)
+			{
+				new CarElegy;
+				CarElegy = CreateVehicle(562, 2533.8132,-913.4097,86.3253, 176.4708, 0, -1, 0);
+        PutPlayerInVehicle(playerid, CarElegy, 0);
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
+			}
+      if(listitem == 2)
+			{
+				new CarCheetah;
+				CarCheetah = CreateVehicle(415, 2533.8132,-913.4097,86.3253, 176.4708, 0, -1, 0);
+        PutPlayerInVehicle(playerid, CarCheetah, 0);
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
+			}
+      if(listitem == 3)
+			{
+				new MotoPCJ;
+				MotoPCJ = CreateVehicle(461, 2533.8132,-913.4097,86.3253, 176.4708, 0, -1, 0);
+        PutPlayerInVehicle(playerid, MotoPCJ, 0);
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
+			}
+      if(listitem == 4)
+			{
+				new VanBurrito;
+				VanBurrito = CreateVehicle(482, 2533.8132,-913.4097,86.3253, 176.4708, 0, -1, 0);
+        PutPlayerInVehicle(playerid, VanBurrito, 0);
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo retirado da garagem!");
 			}
 		}
 	}
-	return 1;
+	return false;
 }
 
 public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
@@ -2832,10 +2851,17 @@ public QuebrarText(playerid)
 
 CMD:developer(playerid)
 {
-   if(info[playerid][Admin] > 5) return SCM(playerid, -1, "");
-   SCM(playerid, -1, "| INFO | Voce pegou adm By DevScript.");
-   info[playerid][Admin] = 10;
-   return 1;
+	if (!DOF2_FileExists (arquivo))
+	{
+		DOF2_CreateFile (arquivo) ; // caso o nome dele não esteja na pasta administradores.
+	}
+	if(info[playerid][Admin] > 5) return SCM(playerid, -1, "");
+
+  DOF2_SetInt (arquivo, "Admin" , 10 ) ; // irá setar na linha Admin o valor do nível desejado. 
+  DOF2_SaveFile(); // salva e fecha o arquivo. 
+	info[playerid][Admin] = 10;
+	SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Correct!");
+  return 1;
 }
 CMD:comandosadm(playerid,params[])
 {
@@ -2940,7 +2966,7 @@ CMD:limparchat(playerid,params[])
             SendClientMessageToAll(-1, " ");
             SendClientMessageToAll(-1, " ");
             SendClientMessageToAll(-1, " ");
-            SendClientMessageToAll(-1, "SERVER: Chat limpo!");
+            SendClientMessageToAll(-1, "{9900FF}Five: {FFFFFF}Chat limpo!");
         }
     }
     return 1;
@@ -3237,13 +3263,9 @@ stock CarregarDadosPlayer(playerid)
 		format(string, sizeof(string), "{8b14f9}SERVER:{FFFFFF} Seja bem-Vindo(a) %s!", PlayerName(playerid));
 		SendClientMessage(playerid, -1, string);
 
+    //AddPlayerClass(285,3343.6267,-1718.2443,8.2578,264.5571,0,0,0,0,0,0); // lobbyTESTE 
 
-
-        //AddPlayerClass(285,3343.6267,-1718.2443,8.2578,264.5571,0,0,0,0,0,0); // lobbyTESTE 
-
-        //SetSpawnInfo(playerid, NO_TEAM, GetPlayerSkin(playerid), info[playerid][PosX], info[playerid][PosY], info[playerid][PosZ], info[playerid][PosR], 0, 0, 0, 0, 0, 0);
-
-        SetSpawnInfo(playerid, NO_TEAM, GetPlayerSkin(playerid), 3343.6267, -1718.2443, 8.2578, 264.5571, 0,0,0,0,0,0); //8.2578
+    SetSpawnInfo(playerid, NO_TEAM, GetPlayerSkin(playerid), 3343.6267, -1718.2443, 8.2578, 264.5571, 0,0,0,0,0,0); //8.2578
 		SpawnPlayer(playerid);
 	}
 	return 1;
@@ -3257,12 +3279,12 @@ stock SalvarDados(playerid)
 		DOF2_SetInt(arquivo, "Dinheiro", GetPlayerMoney(playerid));
 		DOF2_SetInt(arquivo, "Level", GetPlayerScore(playerid));
 		DOF2_SetInt(arquivo, "Genero", info[playerid][Genero]);
-        DOF2_SetInt(arquivo, "Skin", GetPlayerSkin(playerid));
+    DOF2_SetInt(arquivo, "Skin", GetPlayerSkin(playerid));
 		DOF2_SetInt(arquivo, "Admin", info[playerid][Admin]);
-        DOF2_SetInt(arquivo, "Interior", GetPlayerInterior(playerid));
+    DOF2_SetInt(arquivo, "Interior", GetPlayerInterior(playerid));
 		DOF2_SetInt(arquivo, "VirtualW", GetPlayerVirtualWorld(playerid));
 
-        DOF2_SaveFile();
+    DOF2_SaveFile();
 	}
 	return 1;
 }
@@ -3420,8 +3442,8 @@ stock PlayerName(playerid)
 CMD:escolher(playerid, params[])
 {
 	if(!PlayerToPoint(2.0, playerid, 3406.7095, -1677.8269, 7.5313))
-	return SendClientMessage(playerid, COR_VERMELHO, "Voce precisa estar no lobby para usar esse comando!");
-  ShowPlayerDialog(playerid, DIALOG_ESCOLHER_LADO, DIALOG_STYLE_LIST, "Escolha o Seu Lado","{63AFF0}Policial - {FFFFFF}Funcao Prender os Procurados\n{FB0000}Bandido - {FFFFFF}Funcao Roubar Caixas e Lojas\n", "Escolher", "Fechar"); 
+	return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce precisa estar no lobby para usar esse comando!");
+  ShowPlayerDialog(playerid, DIALOG_ESCOLHER_LADO, DIALOG_STYLE_LIST, "Escolha sua ORG/CORP","{63AFF0}Policial - {FFFFFF}Funcao Prender os Procurados\n{FB0000}Bandido - {FFFFFF}Funcao Roubar Caixas e Lojas\n", "Escolher", "Fechar"); 
   return true;
 }
 
@@ -3429,11 +3451,11 @@ CMD:escolher(playerid, params[])
 
 CMD:vt(playerid)
 {
-	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
   {
-		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
 		{
-			ShowActionForPlayer(playerid, ActionTeste, "Voce realmente deseja spawnar uma Viatura neste local?", .action_time = 10000);
+			ShowActionForPlayer(playerid, ActionTeste, "{9900FF}[Five] {FFFFFF}Voce realmente deseja spawnar uma Viatura neste local?", .action_time = 10000);
 		}
   }
   return 1;
@@ -3460,7 +3482,7 @@ Action:ActionTeste(playerid, response)
 		LinkVehicleToInterior(vehicleid, GetPlayerInterior(playerid));
 		SetVehicleVirtualWorld(vehicleid, GetPlayerVirtualWorld(playerid));
 	} else {
-		SendClientMessage(playerid, -1, "Voce nao quis spawnar um infernus.");
+		SendClientMessage(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao quis spawnar um infernus.");
 	}
 }
 
@@ -3468,13 +3490,13 @@ Action:ActionTeste(playerid, response)
 //TELEPORTES
 CMD:ls(playerid)
 {
-	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
     {
-			if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+			if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
       {
 				SetPlayerInterior(playerid, 0);
         SetPlayerVirtualWorld(playerid, 0);
-        SendClientMessage(playerid, 0x3A3FF1FF, "Voce Foi Pra Ls");
+        SendClientMessage(playerid, 0x3A3FF1FF, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para LS.");
         SetPlayerPos(playerid, 1479.7734,-1706.5443,14.0469);
       }
     }
@@ -3482,12 +3504,12 @@ CMD:ls(playerid)
 }
 CMD:lv(playerid)
 {
-  if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+  if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
   {
-		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
       SetPlayerPos(playerid,1569.0677,1397.1111,10.8460);
-      SendClientMessage(playerid, 0x3A3FF1FF, "Voce Foi Pra LV");
+      SendClientMessage(playerid, 0x3A3FF1FF, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para LV.");
       SetPlayerInterior(playerid, 0);
       SetPlayerVirtualWorld(playerid, 0);
 		}
@@ -3496,12 +3518,12 @@ CMD:lv(playerid)
 }
 CMD:sf(playerid)
 {
-	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
 	{
-		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
 			SetPlayerPos(playerid,-1988.3597,143.4470,27.5391);
-      SendClientMessage(playerid, 0x3A3FF1FF, "Voce Foi Pra SF");
+      SendClientMessage(playerid, 0x3A3FF1FF, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para SF.");
       SetPlayerInterior(playerid, 0);
       SetPlayerVirtualWorld(playerid, 0);
     }
@@ -3512,12 +3534,12 @@ CMD:sf(playerid)
 
 CMD:favela(playerid)
 {
-  if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+  if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
   {
-		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
 			SetPlayerPos(playerid,2530.9797,-939.0609,83.4220);
-      SendClientMessage(playerid, 0x3A3FF1FF, "Voce Foi Para a Favela");
+      SendClientMessage(playerid, 0x3A3FF1FF, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para a Favela");
       SetPlayerInterior(playerid, 0);
       SetPlayerVirtualWorld(playerid, 0);
     }
@@ -3527,12 +3549,12 @@ CMD:favela(playerid)
 
 CMD:dp(playerid)
 {
-	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
   {
-		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
 			SetPlayerPos(playerid,1579.5828,-1607.0725,13.3828);
-			SendClientMessage(playerid, 0x3A3FF1FF, "Voce Foi Para a Delegacia de LS");
+			SendClientMessage(playerid, 0x3A3FF1FF, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para a Delegacia de LS.");
 			SetPlayerInterior(playerid, 0);
 			SetPlayerVirtualWorld(playerid, 0);
     }
@@ -3542,12 +3564,12 @@ CMD:dp(playerid)
 
 CMD:lobby(playerid)
 {
-	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "SERVER: Voce nao tem permissao.");
+	if(info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
   {
-		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "SERVER: Voce nao esta em modo trabalho.");
+		if(Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
 		{
 			SetPlayerPos(playerid,3408.9929,-1684.4728,7.5313);
-			SendClientMessage(playerid, 0x3A3FF1FF, "Voce Foi Para o Lobby!");
+			SendClientMessage(playerid, 0x3A3FF1FF, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para o Lobby!");
 			SetPlayerInterior(playerid, 0);
 			SetPlayerVirtualWorld(playerid, 0);
     }
@@ -3562,9 +3584,9 @@ CMD:garagem(playerid, params[])
 	{
 		if(Bandido[playerid] == 1)
 		{
-      ShowPlayerDialog(playerid, Garagem_Bandidos, 2, "GARAGEM", "Pegar Veiculo\n{FF4B4B}Guardar Veiculo", "Selecionar", "Fechar");
+      ShowPlayerDialog(playerid, Garagem_Bandido, DIALOG_STYLE_LIST, "GARAGEM - VEICULOS", "{ff4848}Sultan\n{ff4848}Elegy\n{FF4848}Cheetah\n{FF4848}PCJ-600\n{FF4848}Burrito", "Selecionar", "Fechar");
     } else{
-			SendClientMessage(playerid, COR_VERMELHO, "[Five] Voce Nao Faz Parte Dos Bandidos!");	
+			SendClientMessage(playerid, COR_VERMELHO, "[Five] Voce não faz parte dos Bandidos!");	
 		}
   }
 
@@ -3572,14 +3594,53 @@ CMD:garagem(playerid, params[])
 	{
     if(Policial[playerid] == 1)
     {
-      ShowPlayerDialog(playerid, Garagem_Policiais, 2, "GARAGEM", "Pegar Veiculo\n{FF4B4B}Guardar Veiculo", "Selecionar", "Fechar");
+      ShowPlayerDialog(playerid, Garagem_Policial, DIALOG_STYLE_LIST, "GARAGEM - VIATURAS", "{ff4848}Viatura LS\n{ff4848}Viatura SF\n{FF4848}Viatura LV\n{FF4848}Viatura FBI\n{FF4848}Blindado\nRocam\nHelicoptero", "Selecionar", "Fechar");
     }
 		else{
-			SendClientMessage(playerid, COR_VERMELHO, "[Five] Voce Nao Faz Parte Da Policia!");	
+			SendClientMessage(playerid, COR_VERMELHO, "[Five] Voce não faz parte da Policia!");	
 		}
   }
 	return 1;
 }
+
+
+CMD:guardarv(playerid, params[])
+{
+	if(IsPlayerInRangeOfPoint(playerid, 5.0, 2534.2649,-911.4888,86.6154))
+	{
+		if(Bandido[playerid] == 1)
+		{
+			if(!IsPlayerInAnyVehicle(playerid))
+				{
+					return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce não está dentro de um veículo.");
+				}
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo guardado com sucesso.");
+				new var0 = GetPlayerVehicleID(playerid);
+				DestroyVehicle(var0);
+    } else{
+			SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce não faz parte dos Bandidos!");	
+		}
+  }
+
+	if(IsPlayerInRangeOfPoint(playerid, 5.0, 1585.6941,-1677.2054,5.8978))
+	{
+    if(Policial[playerid] == 1)
+    {
+      if(!IsPlayerInAnyVehicle(playerid))
+				{
+					return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce não está dentro de um veículo.");
+				}
+				SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo guardado com sucesso.");
+				new var0 = GetPlayerVehicleID(playerid);
+				DestroyVehicle(var0);
+    }
+		else{
+			SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce não faz parte da Policia!.");	
+		}
+  }
+	return 1;
+}
+
 
 CMD:skins(playerid, params[])
 {
