@@ -236,3 +236,4 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [10:42:03] [connection] incoming connection: 127.0.0.1:57656 id: 0
 [10:42:03] [join] The_Julio has joined the server (0:127.0.0.1)
 [10:46:00] sscanf warning (`(null)`): "Include / plugin mismatch, please recompile your script for the latest features."
+[11:03:12] [part] The_Julio has left the server (0:1)
