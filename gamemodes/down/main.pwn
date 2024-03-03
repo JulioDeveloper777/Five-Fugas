@@ -53,7 +53,7 @@ new DCC_Channel:g_Discord_Chat;
 #define AZULESCURO_COR          0x2641FEAA
 #define PRETO_COR               0x6E6E6E6E
 
-#define 	red             	"{FF0000}"
+```#define 	red             	"{FF0000}"
 #define     grey                "{AFAFAF}"
 #define     green   	    	"{00FF00}"
 

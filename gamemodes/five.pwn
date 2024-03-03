@@ -87,9 +87,11 @@ new String[128];
 new tmpobjid;
 new Text:LoadingInteriorG[13];
 
-//___________FORWARD_________//
-
-
+//___________DEF'S_________//
+#define LOGO_SERVER            "https://cdn.discordapp.com/attachments/990041379038179368/990042121161560104/IMG_20220620_001902.png?ex=65f4df93&is=65e26a93&hm=48dcf167c5e9fc53a1d9244496a94c842488e8ef2d17f1a6b5d3c069c39bf9fb&"
+#define IMG_ONLINE_DS          "https://cdn.discordapp.com/attachments/844324415004606505/1213943358733680750/b.png?ex=65f74fda&is=65e4dada&hm=a47fa52952d3201fef95b954e208b0a4f3f1d7d6400120d842bb013a53a3b167&"
+#define IP_SERVER              "🔎 **__IP__:** ```51.81.166.66:24459```"
+#define NAME_SERVER            "Five Fugas 2024"
 
 //___________DISCORD CONNECTOR_________//
 new DCC_Channel:statuschannel;
@@ -162,8 +164,8 @@ public OnGameModeInit()
     Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /guardarv", -1, 1585.6941, -1677.2054, 5.8978, 30.0, 0, 0); //GARAGEM POLICIAIS
     CreatePickup(19134, 23, 1585.6941, -1677.2054, 5.8978); //GARAGEM POLICIAIS
 
-    Create3DTextLabel("{FFFFFF}Garagem\n{836FFF}Use: /guardarv", -1, 2534.2649, -911.4888, 86.6154, 30.0, 0, 0); //GARAGEM POLICIAIS
-    CreatePickup(19134, 23, 2534.2649, -911.4888, 86.6154); //GARAGEM POLICIAIS
+    Create3DTextLabel("{FFFFFF}Garagem Helicoptero\n{836FFF}Use: /guardarv", -1, 1550.4474,-1609.7603,13.4933, 30.0, 0, 0); //GARAGEM HELI POLICIAIS
+    CreatePickup(19134, 23, 1550.4474,-1609.7603,13.4933); //GARAGEM HELI POLICIAIS
 
     Create3DTextLabel("{FFFFFF}DELEGACIA\n{836FFF}Digite /entrar para entrar na DELEGACIA", 0xFFA500AA, 1555.5005, -1675.6212, 16.1953, 10.0, 0);
     AddStaticPickup(19133, 24, 1555.5005, -1675.6212, 16.1953); //ENTRAR DELEGACIA
@@ -176,9 +178,10 @@ public OnGameModeInit()
 
     Create3DTextLabel("{FFFFFF}MAGALU\n{836FFF}Digite /sair ou aperte F Para sair da Magalu", 0xFFA500AA, 1127.9659, -1561.3444, -30.2015, 10.0, 0);
     AddStaticPickup(19133, 24, 1127.9659, -1561.3444, -30.2015); // SAIR MAGALU
-
+    
     statuschannel = DCC_FindChannelById("1213156618829701200");
-    new DCC_Embed:embed = DCC_CreateEmbed("**Servidor Onlline**", "IP: 51.81.166.66:24459", "", "", 129310, "Five Fugas 2024", "https://cdn.discordapp.com/attachments/990041379038179368/990042121161560104/IMG_20220620_001902.png?ex=65f4df93&is=65e26a93&hm=48dcf167c5e9fc53a1d9244496a94c842488e8ef2d17f1a6b5d3c069c39bf9fb&", "https://cdn.discordapp.com/attachments/990041379038179368/990042121161560104/IMG_20220620_001902.png?ex=65f4df93&is=65e26a93&hm=48dcf167c5e9fc53a1d9244496a94c842488e8ef2d17f1a6b5d3c069c39bf9fb&", "https://cdn.discordapp.com/attachments/844324415004606505/1213827685202272276/ff.png?ex=65f6e41f&is=65e46f1f&hm=efde81b455fed82efab08e133ea49c653aeee1a1f0c378b7934d1dd75c3214bc&");
+    // new DCC_Embed:embed = DCC_CreateEmbed("**Servidor Onlline**", "IP: 51.81.166.66:24459", "", "", 129310, "Five Fugas 2024", "https://cdn.discordapp.com/attachments/990041379038179368/990042121161560104/IMG_20220620_001902.png?ex=65f4df93&is=65e26a93&hm=48dcf167c5e9fc53a1d9244496a94c842488e8ef2d17f1a6b5d3c069c39bf9fb&", "https://cdn.discordapp.com/attachments/990041379038179368/990042121161560104/IMG_20220620_001902.png?ex=65f4df93&is=65e26a93&hm=48dcf167c5e9fc53a1d9244496a94c842488e8ef2d17f1a6b5d3c069c39bf9fb&", "https://cdn.discordapp.com/attachments/844324415004606505/1213943358733680750/b.png?ex=65f74fda&is=65e4dada&hm=a47fa52952d3201fef95b954e208b0a4f3f1d7d6400120d842bb013a53a3b167&");
+    new DCC_Embed:embed = DCC_CreateEmbed("**Servidor Onlline**", IP_SERVER, "", "", 129310, NAME_SERVER, LOGO_SERVER, LOGO_SERVER, IMG_ONLINE_DS);
     DCC_SendChannelEmbedMessage(statuschannel, embed, "");
 
 
@@ -6123,6 +6126,18 @@ CMD:escolher(playerid, params[])
     return true;
 }
 
+CMD:esc(playerid, params[])
+{
+    if (info[playerid][Admin] < 10) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    {
+        if (Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
+        {
+            ShowPlayerDialog(playerid, DIALOG_ESCOLHER_LADO, DIALOG_STYLE_LIST, "(ADMIN) Escolha sua ORG/CORP", "{63AFF0}Policial - {FFFFFF}Funcao Prender os Procurados\n{FB0000}Bandido - {FFFFFF}Funcao Roubar Caixas e Lojas\n", "Escolher", "Fechar");
+        }
+    }
+    return true;
+}
+
 //TELEPORTES
 CMD:ls(playerid)
 {
@@ -6247,7 +6262,7 @@ CMD:garagem(playerid, params[])
     {
         if (Policial[playerid] == 1)
         {
-            ShowPlayerDialog(playerid, Garagem_Policial, DIALOG_STYLE_LIST, "GARAGEM - VIATURAS", "{ff4848}Viatura LS\n{ff4848}Viatura SF\n{FF4848}Viatura LV\n{FF4848}Viatura FBI\n{FF4848}Blindado\nRocam\nHelicoptero", "Selecionar", "Fechar");
+            ShowPlayerDialog(playerid, Garagem_Policial, DIALOG_STYLE_LIST, "GARAGEM - VIATURAS", "{ff4848}Viatura LS\n{ff4848}Viatura SF\n{FF4848}Viatura LV\n{FF4848}Viatura FBI\n{FF4848}Blindado\n{FF4848}Rocam\n{FF4848}Helicoptero", "Selecionar", "Fechar");
         }
         else
         {
@@ -6294,6 +6309,27 @@ CMD:guardarv(playerid, params[])
         {
             SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce nao faz parte da Policia!.");
         }
+    }
+    if (IsPlayerInRangeOfPoint(playerid, 5.0, 1550.4474,-1609.7603,13.4933))
+    {
+        // if (Policial[playerid] == 1)
+        // {
+        //     if (IsPlayerInAnyVehicle(playerid))
+        //     {
+        //         if(IsPlayerInVehicle(playerid, 497)) 
+        //         {
+        //             SendClientMessage(playerid, COR_ROXOCLARO, "{9900FF}[Five] {FFFFFF}Veiculo guardado com sucesso.");
+        //             new var0 = GetPlayerVehicleID(playerid);
+        //             DestroyVehicle(var0);
+        //         }
+        //         return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce so pode guardar helicopteros nessa garagem.");
+        //     }
+        //     return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce nao esta dentro de um helicoptero.");
+        // }
+        // else
+        // {
+        //     return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce nao faz parte da Policia!.");
+        // }
     }
     return 1;
 }

@@ -1040,3 +1040,565 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [14:40:06] [connection] 127.0.0.1:50158 requests connection cookie.
 [14:40:07] [connection] incoming connection: 127.0.0.1:50158 id: 0
 [14:40:07] [join] The_Julio has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:21:33] filterscripts = ""  (string)
+[17:21:33] 
+[17:21:33] Server Plugins
+[17:21:33] --------------
+[17:21:33]  Loading plugin: sscanf
+[17:21:33] 
+[17:21:33]  ===============================
+[17:21:33] 
+[17:21:33]       sscanf plugin loaded.     
+[17:21:33] 
+[17:21:33]          Version: 2.13.8
+[17:21:33] 
+[17:21:33]    (c) 2022 Alex "Y_Less" Cole  
+[17:21:33] 
+[17:21:33]  ===============================
+[17:21:33] 
+[17:21:33]   Loaded.
+[17:21:33]  Loading plugin: streamer
+[17:21:33] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:21:33]   Loaded.
+[17:21:33]  Loading plugin: discord-connector
+[17:21:34]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:21:34]   Loaded.
+[17:21:34]  Loaded 3 plugins.
+
+[17:21:34] 
+[17:21:34] Filterscripts
+[17:21:34] ---------------
+[17:21:34]   Loaded 0 filterscripts.
+
+[17:21:34] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:25:39] filterscripts = ""  (string)
+[17:25:39] 
+[17:25:39] Server Plugins
+[17:25:39] --------------
+[17:25:39]  Loading plugin: sscanf
+[17:25:39] 
+[17:25:39]  ===============================
+[17:25:39] 
+[17:25:39]       sscanf plugin loaded.     
+[17:25:39] 
+[17:25:39]          Version: 2.13.8
+[17:25:39] 
+[17:25:39]    (c) 2022 Alex "Y_Less" Cole  
+[17:25:39] 
+[17:25:39]  ===============================
+[17:25:39] 
+[17:25:39]   Loaded.
+[17:25:39]  Loading plugin: streamer
+[17:25:39] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:25:39]   Loaded.
+[17:25:39]  Loading plugin: discord-connector
+[17:25:40]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:25:40]   Loaded.
+[17:25:40]  Loaded 3 plugins.
+
+[17:25:40] 
+[17:25:40] Filterscripts
+[17:25:40] ---------------
+[17:25:40]   Loaded 0 filterscripts.
+
+[17:25:40] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:25:59] filterscripts = ""  (string)
+[17:25:59] 
+[17:25:59] Server Plugins
+[17:25:59] --------------
+[17:25:59]  Loading plugin: sscanf
+[17:25:59] 
+[17:25:59]  ===============================
+[17:25:59] 
+[17:25:59]       sscanf plugin loaded.     
+[17:25:59] 
+[17:25:59]          Version: 2.13.8
+[17:25:59] 
+[17:25:59]    (c) 2022 Alex "Y_Less" Cole  
+[17:25:59] 
+[17:25:59]  ===============================
+[17:25:59] 
+[17:25:59]   Loaded.
+[17:25:59]  Loading plugin: streamer
+[17:25:59] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:25:59]   Loaded.
+[17:25:59]  Loading plugin: discord-connector
+[17:26:00]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:26:00]   Loaded.
+[17:26:00]  Loaded 3 plugins.
+
+[17:26:00] 
+[17:26:00] Filterscripts
+[17:26:00] ---------------
+[17:26:00]   Loaded 0 filterscripts.
+
+[17:26:00] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:26:59] filterscripts = ""  (string)
+[17:26:59] 
+[17:26:59] Server Plugins
+[17:26:59] --------------
+[17:26:59]  Loading plugin: sscanf
+[17:26:59] 
+[17:26:59]  ===============================
+[17:26:59] 
+[17:26:59]       sscanf plugin loaded.     
+[17:26:59] 
+[17:26:59]          Version: 2.13.8
+[17:26:59] 
+[17:26:59]    (c) 2022 Alex "Y_Less" Cole  
+[17:26:59] 
+[17:26:59]  ===============================
+[17:26:59] 
+[17:26:59]   Loaded.
+[17:26:59]  Loading plugin: streamer
+[17:26:59] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:26:59]   Loaded.
+[17:26:59]  Loading plugin: discord-connector
+[17:27:00]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:27:00]   Loaded.
+[17:27:00]  Loaded 3 plugins.
+
+[17:27:00] 
+[17:27:00] Filterscripts
+[17:27:00] ---------------
+[17:27:00]   Loaded 0 filterscripts.
+
+[17:27:00] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:27:55] filterscripts = ""  (string)
+[17:27:55] 
+[17:27:55] Server Plugins
+[17:27:55] --------------
+[17:27:55]  Loading plugin: sscanf
+[17:27:55] 
+[17:27:55]  ===============================
+[17:27:55] 
+[17:27:55]       sscanf plugin loaded.     
+[17:27:55] 
+[17:27:55]          Version: 2.13.8
+[17:27:55] 
+[17:27:55]    (c) 2022 Alex "Y_Less" Cole  
+[17:27:55] 
+[17:27:55]  ===============================
+[17:27:55] 
+[17:27:55]   Loaded.
+[17:27:55]  Loading plugin: streamer
+[17:27:55] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:27:55]   Loaded.
+[17:27:55]  Loading plugin: discord-connector
+[17:27:56]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:27:56]   Loaded.
+[17:27:56]  Loaded 3 plugins.
+
+[17:27:56] 
+[17:27:56] Filterscripts
+[17:27:56] ---------------
+[17:27:56]   Loaded 0 filterscripts.
+
+[17:27:56] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:29:12] filterscripts = ""  (string)
+[17:29:12] 
+[17:29:12] Server Plugins
+[17:29:12] --------------
+[17:29:12]  Loading plugin: sscanf
+[17:29:12] 
+[17:29:12]  ===============================
+[17:29:12] 
+[17:29:12]       sscanf plugin loaded.     
+[17:29:12] 
+[17:29:12]          Version: 2.13.8
+[17:29:12] 
+[17:29:12]    (c) 2022 Alex "Y_Less" Cole  
+[17:29:12] 
+[17:29:12]  ===============================
+[17:29:12] 
+[17:29:12]   Loaded.
+[17:29:12]  Loading plugin: streamer
+[17:29:12] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:29:12]   Loaded.
+[17:29:12]  Loading plugin: discord-connector
+[17:29:12]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:29:12]   Loaded.
+[17:29:12]  Loaded 3 plugins.
+
+[17:29:12] 
+[17:29:12] Filterscripts
+[17:29:12] ---------------
+[17:29:12]   Loaded 0 filterscripts.
+
+[17:29:12] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:32:27] filterscripts = ""  (string)
+[17:32:27] 
+[17:32:27] Server Plugins
+[17:32:27] --------------
+[17:32:27]  Loading plugin: sscanf
+[17:32:27] 
+[17:32:27]  ===============================
+[17:32:27] 
+[17:32:27]       sscanf plugin loaded.     
+[17:32:27] 
+[17:32:27]          Version: 2.13.8
+[17:32:27] 
+[17:32:27]    (c) 2022 Alex "Y_Less" Cole  
+[17:32:27] 
+[17:32:27]  ===============================
+[17:32:27] 
+[17:32:27]   Loaded.
+[17:32:27]  Loading plugin: streamer
+[17:32:27] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:32:27]   Loaded.
+[17:32:27]  Loading plugin: discord-connector
+[17:32:27]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:32:27]   Loaded.
+[17:32:27]  Loaded 3 plugins.
+
+[17:32:27] 
+[17:32:27] Filterscripts
+[17:32:27] ---------------
+[17:32:27]   Loaded 0 filterscripts.
+
+[17:32:27] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:35:03] filterscripts = ""  (string)
+[17:35:03] 
+[17:35:03] Server Plugins
+[17:35:03] --------------
+[17:35:03]  Loading plugin: sscanf
+[17:35:03] 
+[17:35:03]  ===============================
+[17:35:03] 
+[17:35:03]       sscanf plugin loaded.     
+[17:35:03] 
+[17:35:03]          Version: 2.13.8
+[17:35:03] 
+[17:35:03]    (c) 2022 Alex "Y_Less" Cole  
+[17:35:03] 
+[17:35:03]  ===============================
+[17:35:03] 
+[17:35:03]   Loaded.
+[17:35:03]  Loading plugin: streamer
+[17:35:03] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:35:03]   Loaded.
+[17:35:03]  Loading plugin: discord-connector
+[17:35:04]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:35:04]   Loaded.
+[17:35:04]  Loaded 3 plugins.
+
+[17:35:04] 
+[17:35:04] Filterscripts
+[17:35:04] ---------------
+[17:35:04]   Loaded 0 filterscripts.
+
+[17:35:04] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:41:44] filterscripts = ""  (string)
+[17:41:44] 
+[17:41:44] Server Plugins
+[17:41:44] --------------
+[17:41:44]  Loading plugin: sscanf
+[17:41:44] 
+[17:41:44]  ===============================
+[17:41:44] 
+[17:41:44]       sscanf plugin loaded.     
+[17:41:44] 
+[17:41:44]          Version: 2.13.8
+[17:41:44] 
+[17:41:44]    (c) 2022 Alex "Y_Less" Cole  
+[17:41:44] 
+[17:41:44]  ===============================
+[17:41:44] 
+[17:41:44]   Loaded.
+[17:41:44]  Loading plugin: streamer
+[17:41:44] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:41:44]   Loaded.
+[17:41:44]  Loading plugin: discord-connector
+[17:41:45]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:41:45]   Loaded.
+[17:41:45]  Loaded 3 plugins.
+
+[17:41:45] 
+[17:41:45] Filterscripts
+[17:41:45] ---------------
+[17:41:45]   Loaded 0 filterscripts.
+
+[17:41:45] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:42:15] filterscripts = ""  (string)
+[17:42:15] 
+[17:42:15] Server Plugins
+[17:42:15] --------------
+[17:42:15]  Loading plugin: sscanf
+[17:42:15] 
+[17:42:15]  ===============================
+[17:42:15] 
+[17:42:15]       sscanf plugin loaded.     
+[17:42:15] 
+[17:42:15]          Version: 2.13.8
+[17:42:15] 
+[17:42:15]    (c) 2022 Alex "Y_Less" Cole  
+[17:42:15] 
+[17:42:15]  ===============================
+[17:42:15] 
+[17:42:15]   Loaded.
+[17:42:15]  Loading plugin: streamer
+[17:42:15] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:42:15]   Loaded.
+[17:42:15]  Loading plugin: discord-connector
+[17:42:16]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:42:16]   Loaded.
+[17:42:16]  Loaded 3 plugins.
+
+[17:42:16] 
+[17:42:16] Filterscripts
+[17:42:16] ---------------
+[17:42:16]   Loaded 0 filterscripts.
+
+[17:42:16] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:44:46] filterscripts = ""  (string)
+[17:44:46] 
+[17:44:46] Server Plugins
+[17:44:46] --------------
+[17:44:46]  Loading plugin: sscanf
+[17:44:46] 
+[17:44:46]  ===============================
+[17:44:46] 
+[17:44:46]       sscanf plugin loaded.     
+[17:44:46] 
+[17:44:46]          Version: 2.13.8
+[17:44:46] 
+[17:44:46]    (c) 2022 Alex "Y_Less" Cole  
+[17:44:46] 
+[17:44:46]  ===============================
+[17:44:46] 
+[17:44:46]   Loaded.
+[17:44:46]  Loading plugin: streamer
+[17:44:46] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:44:46]   Loaded.
+[17:44:46]  Loading plugin: discord-connector
+[17:44:47]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:44:47]   Loaded.
+[17:44:47]  Loaded 3 plugins.
+
+[17:44:47] 
+[17:44:47] Filterscripts
+[17:44:47] ---------------
+[17:44:47]   Loaded 0 filterscripts.
+
+[17:44:47] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:45:32] filterscripts = ""  (string)
+[17:45:32] 
+[17:45:32] Server Plugins
+[17:45:32] --------------
+[17:45:32]  Loading plugin: sscanf
+[17:45:32] 
+[17:45:32]  ===============================
+[17:45:32] 
+[17:45:32]       sscanf plugin loaded.     
+[17:45:32] 
+[17:45:32]          Version: 2.13.8
+[17:45:32] 
+[17:45:32]    (c) 2022 Alex "Y_Less" Cole  
+[17:45:32] 
+[17:45:32]  ===============================
+[17:45:32] 
+[17:45:32]   Loaded.
+[17:45:32]  Loading plugin: streamer
+[17:45:32] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[17:45:32]   Loaded.
+[17:45:32]  Loading plugin: discord-connector
+[17:45:33]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[17:45:33]   Loaded.
+[17:45:33]  Loaded 3 plugins.
+
+[17:45:33] 
+[17:45:33] Filterscripts
+[17:45:33] ---------------
+[17:45:33]   Loaded 0 filterscripts.
+
+[17:45:33] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:24:26] filterscripts = ""  (string)
+[19:24:26] 
+[19:24:26] Server Plugins
+[19:24:26] --------------
+[19:24:26]  Loading plugin: sscanf
+[19:24:26] 
+[19:24:26]  ===============================
+[19:24:26] 
+[19:24:26]       sscanf plugin loaded.     
+[19:24:26] 
+[19:24:26]          Version: 2.13.8
+[19:24:26] 
+[19:24:26]    (c) 2022 Alex "Y_Less" Cole  
+[19:24:26] 
+[19:24:26]  ===============================
+[19:24:26] 
+[19:24:26]   Loaded.
+[19:24:26]  Loading plugin: streamer
+[19:24:26] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:24:26]   Loaded.
+[19:24:26]  Loading plugin: discord-connector
+[19:24:27]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[19:24:27]   Loaded.
+[19:24:27]  Loaded 3 plugins.
+
+[19:24:27] 
+[19:24:27] Filterscripts
+[19:24:27] ---------------
+[19:24:27]   Loaded 0 filterscripts.
+
+[19:24:27] Number of vehicle models: 0
+[19:24:50] [connection] 127.0.0.1:51396 requests connection cookie.
+[19:24:51] [connection] incoming connection: 127.0.0.1:51396 id: 0
+[19:24:51] [join] The_Julio has joined the server (0:127.0.0.1)
