@@ -262,7 +262,7 @@
 	#error MAX_PICKUPS must be >= 1 and <= 4096
 #endif
 
-public const SAMP_INCLUDES_VERSION = 0x037030;
+//public const SAMP_INCLUDES_VERSION = 0x037030;
 
 #include <core>
 #include <float>
@@ -1697,7 +1697,7 @@ native Menu:GetPlayerMenu(playerid);
 /// </remarks>
 /// <remarks>Keyboard key mapping codes (such as <b><c>~k~~VEHICLE_ENTER_EXIT~</c></b> don't work beyond 255th character. </remarks>
 /// <returns>The ID of the created textdraw. Textdraw IDs start at <b><c>0</c></b>.</returns>
-native Text:TextDrawCreate(Float:x, Float:y, const text[]);
+native CreatePlayerTextDrawText:TextDrawCreate(Float:x, Float:y, const text[]);
 
 /// <summary>Destroys a previously-created textdraw.</summary>
 /// <param name="text">The ID of the textdraw to destroy. Returned by <a href="#TextDrawCreate">TextDrawCreate</a></param>

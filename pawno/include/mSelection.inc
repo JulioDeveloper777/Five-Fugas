@@ -4,14 +4,21 @@
 // - Kye 2013
 //
 // Version 1.1 R2
-#include <a_samp>
 
+/*Functions to be used
+
+LoadModelSelectionMenu(f_name[])
+HideModelSelectionMenu(playerid)
+ShowModelSelectionMenu(playerid, ListID, header_text[], dialogBGcolor = 0x4A5A6BBB, previewBGcolor = 0x88888899 , tdSelectionColor = 0xFFFF00AA)
+ShowModelSelectionMenuEx(playerid, items_array[], item_amount, header_text[], extraid, Float:Xrot = 0.0, Float:Yrot = 0.0, Float:Zrot = 0.0, Float:mZoom = 1.0, dialogBGcolor = 0x4A5A6BBB, previewBGcolor = 0x88888899 , tdSelectionColor = 0xFFFF00AA)
+
+*/
 // Callbacks
 forward OnPlayerModelSelection(playerid, response, listid, modelid);
 forward OnPlayerModelSelectionEx(playerid, response, extraid, modelid);
 
 // settings static lists
-#define mS_TOTAL_ITEMS         	1000 // Max amount of items from all lists
+#define mS_TOTAL_ITEMS         	2000 // Max amount of items from all lists
 #define mS_TOTAL_LISTS			20 // Max amount of lists
 #define mS_TOTAL_ROT_ZOOM		100 // Max amount of items using extra information like zoom or rotations
 
@@ -22,9 +29,9 @@ new gCustomList[MAX_PLAYERS][mS_CUSTOM_MAX_ITEMS];
 #define mS_INVALID_LISTID		mS_TOTAL_LISTS
 #define mS_CUSTOM_LISTID		(mS_TOTAL_LISTS+1)
 
-#define mS_NEXT_TEXT	"Siguiente"
-#define mS_PREV_TEXT	"Atras"
-#define mS_CANCEL_TEXT	"Cancelar"
+#define mS_NEXT_TEXT   "Proxima"
+#define mS_PREV_TEXT   "Anterior"
+#define mS_CANCEL_TEXT   "Cancelar"
 
 #define mS_SELECTION_ITEMS 		21
 #define mS_ITEMS_PER_LINE  		7
@@ -69,7 +76,7 @@ stock mS_GetNumberOfPages(ListID)
 	}
 	else return (ItemAmount / mS_SELECTION_ITEMS) + 1;
 }
-//aa
+
 //------------------------------------------------
 
 stock mS_GetNumberOfPagesEx(playerid)
@@ -112,10 +119,10 @@ stock PlayerText:mS_CreateCurrentPageTextDraw(playerid, Float:Xpos, Float:Ypos)
    	txtInit = CreatePlayerTextDraw(playerid, Xpos, Ypos, "0/0");
    	PlayerTextDrawUseBox(playerid, txtInit, 0);
 	PlayerTextDrawLetterSize(playerid, txtInit, 0.4, 1.1);
-	PlayerTextDrawFont(playerid, txtInit, 3);
+	PlayerTextDrawFont(playerid, txtInit, 1);
 	PlayerTextDrawSetShadow(playerid, txtInit, 0);
     PlayerTextDrawSetOutline(playerid, txtInit, 1);
-    PlayerTextDrawColor(playerid, txtInit, 0xFFFFFFFF);
+    PlayerTextDrawColor(playerid, txtInit, 0xACCBF1FF);
     PlayerTextDrawShow(playerid, txtInit);
     return txtInit;
 }
@@ -128,20 +135,20 @@ stock PlayerText:mS_CreatePlayerDialogButton(playerid, Float:Xpos, Float:Ypos, F
  	new PlayerText:txtInit;
    	txtInit = CreatePlayerTextDraw(playerid, Xpos, Ypos, button_text);
    	PlayerTextDrawUseBox(playerid, txtInit, 1);
-   	PlayerTextDrawBoxColor(playerid, txtInit, 0x000000000);
-   	PlayerTextDrawBackgroundColor(playerid, txtInit, 0x000000000);
+   	PlayerTextDrawBoxColor(playerid, txtInit, 0x000000FF);
+   	PlayerTextDrawBackgroundColor(playerid, txtInit, 0x000000FF);
 	PlayerTextDrawLetterSize(playerid, txtInit, 0.4, 1.1);
-	PlayerTextDrawFont(playerid, txtInit, 3);
+	PlayerTextDrawFont(playerid, txtInit, 1);
 	PlayerTextDrawSetShadow(playerid, txtInit, 0); // no shadow
     PlayerTextDrawSetOutline(playerid, txtInit, 0);
-    PlayerTextDrawColor(playerid, txtInit, 0xFFFFFFFF);
+    PlayerTextDrawColor(playerid, txtInit, 0x4A5A6BFF);
     PlayerTextDrawSetSelectable(playerid, txtInit, 1);
     PlayerTextDrawAlignment(playerid, txtInit, 2);
     PlayerTextDrawTextSize(playerid, txtInit, Height, Width); // The width and height are reversed for centering.. something the game does <g>
     PlayerTextDrawShow(playerid, txtInit);
     return txtInit;
 }
-
+ 
 //------------------------------------------------
 
 stock PlayerText:mS_CreatePlayerHeaderTextDraw(playerid, Float:Xpos, Float:Ypos, header_text[])
@@ -149,7 +156,7 @@ stock PlayerText:mS_CreatePlayerHeaderTextDraw(playerid, Float:Xpos, Float:Ypos,
 	new PlayerText:txtInit;
    	txtInit = CreatePlayerTextDraw(playerid, Xpos, Ypos, header_text);
    	PlayerTextDrawUseBox(playerid, txtInit, 0);
-	PlayerTextDrawLetterSize(playerid, txtInit, 0.7, 1.0);
+	PlayerTextDrawLetterSize(playerid, txtInit, 1.25, 3.0);
 	PlayerTextDrawFont(playerid, txtInit, 0);
 	PlayerTextDrawSetShadow(playerid, txtInit, 0);
     PlayerTextDrawSetOutline(playerid, txtInit, 1);
@@ -169,7 +176,7 @@ stock PlayerText:mS_CreatePlayerBGTextDraw(playerid, Float:Xpos, Float:Ypos, Flo
 	PlayerTextDrawFont(playerid, txtBackground, 0);
 	PlayerTextDrawSetShadow(playerid, txtBackground, 0);
     PlayerTextDrawSetOutline(playerid, txtBackground, 0);
-    PlayerTextDrawColor(playerid, txtBackground,0xFFFFFFFF);
+    PlayerTextDrawColor(playerid, txtBackground,0x000000FF);
     PlayerTextDrawTextSize(playerid, txtBackground, Width, Height);
    	PlayerTextDrawBackgroundColor(playerid, txtBackground, bgcolor);
     PlayerTextDrawShow(playerid, txtBackground);
@@ -216,7 +223,7 @@ stock mS_ShowPlayerMPs(playerid)
 	new Float:BaseX = mS_DIALOG_BASE_X;
 	new Float:BaseY = mS_DIALOG_BASE_Y - (mS_SPRITE_DIM_Y * 0.33); // down a bit
 	new linetracker = 0;
-
+	
 	new mS_listID = mS_GetPlayerCurrentListID(playerid);
 	if(mS_listID == mS_CUSTOM_LISTID)
 	{
@@ -247,7 +254,7 @@ stock mS_ShowPlayerMPs(playerid)
 	else
 	{
 		new itemat = (gLists[mS_listID][mS_LIST_START] + (GetPVarInt(playerid, "mS_list_page") * mS_SELECTION_ITEMS));
-
+		
 		// Destroy any previous ones created
 		mS_DestroyPlayerMPs(playerid);
 
@@ -289,7 +296,7 @@ stock mS_UpdatePageTextDraw(playerid)
 
 //------------------------------------------------
 
-stock ShowModelSelectionMenu(playerid, ListID, header_text[], dialogBGcolor = 0xFFA115AA, previewBGcolor = 0xFFFFCDAA , tdSelectionColor = 0x0070FFAA)
+stock ShowModelSelectionMenu(playerid, ListID, header_text[], dialogBGcolor = 0x4A5A6BBB, previewBGcolor = 0x88888899 , tdSelectionColor = 0xFFFF00AA)
 {
 	if(!(0 <= ListID < mS_TOTAL_LISTS && gLists[ListID][mS_LIST_START] != gLists[ListID][mS_LIST_END])) return 0;
 	mS_DestroySelectionMenu(playerid);
@@ -300,7 +307,7 @@ stock ShowModelSelectionMenu(playerid, ListID, header_text[], dialogBGcolor = 0x
 
     gBackgroundTextDrawId[playerid] = mS_CreatePlayerBGTextDraw(playerid, mS_DIALOG_BASE_X, mS_DIALOG_BASE_Y + 20.0, mS_DIALOG_WIDTH, mS_DIALOG_HEIGHT, dialogBGcolor);
     gHeaderTextDrawId[playerid] = mS_CreatePlayerHeaderTextDraw(playerid, mS_DIALOG_BASE_X, mS_DIALOG_BASE_Y, header_text);
-    //gCurrentPageTextDrawId[playerid] = mS_CreateCurrentPageTextDraw(playerid, mS_DIALOG_WIDTH - 30.0, mS_DIALOG_BASE_Y + 15.0);
+    gCurrentPageTextDrawId[playerid] = mS_CreateCurrentPageTextDraw(playerid, mS_DIALOG_WIDTH - 30.0, mS_DIALOG_BASE_Y + 15.0);
     gNextButtonTextDrawId[playerid] = mS_CreatePlayerDialogButton(playerid, mS_DIALOG_WIDTH - 30.0, mS_DIALOG_BASE_Y+mS_DIALOG_HEIGHT+100.0, 50.0, 16.0, mS_NEXT_TEXT);
     gPrevButtonTextDrawId[playerid] = mS_CreatePlayerDialogButton(playerid, mS_DIALOG_WIDTH - 90.0, mS_DIALOG_BASE_Y+mS_DIALOG_HEIGHT+100.0, 50.0, 16.0, mS_PREV_TEXT);
     gCancelButtonTextDrawId[playerid] = mS_CreatePlayerDialogButton(playerid, mS_DIALOG_WIDTH - 150.0, mS_DIALOG_BASE_Y+mS_DIALOG_HEIGHT+100.0, 50.0, 16.0, mS_CANCEL_TEXT);
@@ -308,14 +315,14 @@ stock ShowModelSelectionMenu(playerid, ListID, header_text[], dialogBGcolor = 0x
 	SetPVarInt(playerid, "mS_previewBGcolor", previewBGcolor);
     mS_ShowPlayerMPs(playerid);
     mS_UpdatePageTextDraw(playerid);
-
+	
 	SelectTextDraw(playerid, tdSelectionColor);
 	return 1;
 }
 
 //------------------------------------------------------------
 
-stock ShowModelSelectionMenuEx(playerid, items_array[], item_amount, header_text[], extraid, Float:Xrot = 0.0, Float:Yrot = 0.0, Float:Zrot = 0.0, Float:mZoom = 1.0, dialogBGcolor = 0xFFA100AA, previewBGcolor = 0xFFA115AA , tdSelectionColor = 0xFFA115AA)
+stock ShowModelSelectionMenuEx(playerid, items_array[], item_amount, header_text[], extraid, Float:Xrot = 0.0, Float:Yrot = 0.0, Float:Zrot = 0.0, Float:mZoom = 1.0, dialogBGcolor = 0x4A5A6BBB, previewBGcolor = 0x88888899 , tdSelectionColor = 0xFFFF00AA)
 {
 	mS_DestroySelectionMenu(playerid);
 	if(item_amount > mS_CUSTOM_MAX_ITEMS)
@@ -333,18 +340,18 @@ stock ShowModelSelectionMenuEx(playerid, items_array[], item_amount, header_text
 		SetPVarInt(playerid, "mS_list_id", mS_CUSTOM_LISTID);
 		SetPVarInt(playerid, "mS_list_active", 1);
 		SetPVarInt(playerid, "mS_list_time", GetTickCount());
-
+	
 		SetPVarInt(playerid, "mS_custom_item_amount", item_amount);
 		SetPVarFloat(playerid, "mS_custom_Xrot", Xrot);
 		SetPVarFloat(playerid, "mS_custom_Yrot", Yrot);
 		SetPVarFloat(playerid, "mS_custom_Zrot", Zrot);
 		SetPVarFloat(playerid, "mS_custom_Zoom", mZoom);
 		SetPVarInt(playerid, "mS_custom_extraid", extraid);
-
+		
 
 		gBackgroundTextDrawId[playerid] = mS_CreatePlayerBGTextDraw(playerid, mS_DIALOG_BASE_X, mS_DIALOG_BASE_Y + 20.0, mS_DIALOG_WIDTH, mS_DIALOG_HEIGHT, dialogBGcolor);
 		gHeaderTextDrawId[playerid] = mS_CreatePlayerHeaderTextDraw(playerid, mS_DIALOG_BASE_X, mS_DIALOG_BASE_Y, header_text);
-		//gCurrentPageTextDrawId[playerid] = mS_CreateCurrentPageTextDraw(playerid, mS_DIALOG_WIDTH - 30.0, mS_DIALOG_BASE_Y + 15.0);
+		gCurrentPageTextDrawId[playerid] = mS_CreateCurrentPageTextDraw(playerid, mS_DIALOG_WIDTH - 30.0, mS_DIALOG_BASE_Y + 15.0);
 		gNextButtonTextDrawId[playerid] = mS_CreatePlayerDialogButton(playerid, mS_DIALOG_WIDTH - 30.0, mS_DIALOG_BASE_Y+mS_DIALOG_HEIGHT+100.0, 50.0, 16.0, mS_NEXT_TEXT);
 		gPrevButtonTextDrawId[playerid] = mS_CreatePlayerDialogButton(playerid, mS_DIALOG_WIDTH - 90.0, mS_DIALOG_BASE_Y+mS_DIALOG_HEIGHT+100.0, 50.0, 16.0, mS_PREV_TEXT);
 		gCancelButtonTextDrawId[playerid] = mS_CreatePlayerDialogButton(playerid, mS_DIALOG_WIDTH - 150.0, mS_DIALOG_BASE_Y+mS_DIALOG_HEIGHT+100.0, 50.0, 16.0, mS_CANCEL_TEXT);
@@ -352,7 +359,7 @@ stock ShowModelSelectionMenuEx(playerid, items_array[], item_amount, header_text
 		SetPVarInt(playerid, "mS_previewBGcolor", previewBGcolor);
 		mS_ShowPlayerMPs(playerid);
 		mS_UpdatePageTextDraw(playerid);
-
+		
 		SelectTextDraw(playerid, tdSelectionColor);
 		return 1;
 	}
@@ -376,7 +383,7 @@ stock mS_DestroySelectionMenu(playerid)
 	if(GetPVarInt(playerid, "mS_list_active") == 1)
 	{
 		if(mS_GetPlayerCurrentListID(playerid) == mS_CUSTOM_LISTID)
-		{
+		{		
 			DeletePVar(playerid, "mS_custom_Xrot");
 			DeletePVar(playerid, "mS_custom_Yrot");
 			DeletePVar(playerid, "mS_custom_Zrot");
@@ -399,8 +406,8 @@ stock mS_DestroySelectionMenu(playerid)
 		gBackgroundTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
 		gCurrentPageTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
 		gNextButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
-		gPrevButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
-		gCancelButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
+		gPrevButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;	
+		gCancelButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;	
 	}
 }
 
@@ -415,13 +422,13 @@ public OnPlayerConnect(playerid)
     gNextButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
     gPrevButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
     gCancelButtonTextDrawId[playerid] = PlayerText:INVALID_TEXT_DRAW;
-
+    
     for(new x=0; x < mS_SELECTION_ITEMS; x++) {
         gSelectionItems[playerid][x] = PlayerText:INVALID_TEXT_DRAW;
 	}
-
+	
 	gItemAt[playerid] = 0;
-
+	
 	return CallLocalFunction("MP_OPC", "i", playerid);
 }
 
@@ -464,7 +471,7 @@ public OnPlayerClickTextDraw(playerid, Text:clickedid)
 		}
         return 1;
 	}
-
+	
 	return CallLocalFunction("MP_OPCTD", "ii", playerid, _:clickedid);
 }
 
@@ -484,7 +491,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 	if(GetPVarInt(playerid, "mS_list_active") == 0 || (GetTickCount()-GetPVarInt(playerid, "mS_list_time")) < 200 /* Disable instant selection */) return CallLocalFunction("MP_OPCPTD", "ii", playerid, _:playertextid);
 
 	new curpage = GetPVarInt(playerid, "mS_list_page");
-
+	
 	// Handle: cancel button
 	if(playertextid == gCancelButtonTextDrawId[playerid]) {
 		new listID = mS_GetPlayerCurrentListID(playerid);
@@ -503,12 +510,12 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 		}
 		return 1;
 	}
-
+		
 	// Handle: next button
 	if(playertextid == gNextButtonTextDrawId[playerid]) {
 		new listID = mS_GetPlayerCurrentListID(playerid);
 		if(listID == mS_CUSTOM_LISTID)
-		{
+		{			
 			if(curpage < (mS_GetNumberOfPagesEx(playerid) - 1)) {
 				SetPVarInt(playerid, "mS_list_page", curpage + 1);
 				mS_ShowPlayerMPs(playerid);
@@ -531,7 +538,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 		}
 		return 1;
 	}
-
+	
 	// Handle: previous button
 	if(playertextid == gPrevButtonTextDrawId[playerid]) {
 	    if(curpage > 0) {
@@ -544,7 +551,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 		}
 		return 1;
 	}
-
+	
 	// Search in the array of textdraws used for the items
 	new x=0;
 	while(x != mS_SELECTION_ITEMS) {
@@ -570,7 +577,7 @@ public OnPlayerClickPlayerTextDraw(playerid, PlayerText:playertextid)
 		}
 		x++;
 	}
-
+	
 	return CallLocalFunction("MP_OPCPTD", "ii", playerid, _:playertextid);
 }
 
@@ -595,15 +602,15 @@ stock LoadModelSelectionMenu(f_name[])
 		printf("-mSelection- WARNING: Failed to load list: \"%s\"", f_name);
 		return mS_INVALID_LISTID;
 	}
-
+	
 	if(gListAmount >= mS_TOTAL_LISTS)
 	{
 		printf("-mSelection- WARNING: Reached maximum amount of lists, increase \"mS_TOTAL_LISTS\"", f_name);
 		return mS_INVALID_LISTID;
 	}
 	new tmp_ItemAmount = gItemAmount; // copy value if loading fails
-
-
+	
+	
 	new line[128], idxx;
 	while(fread(f,line,sizeof(line),false))
 	{
@@ -618,11 +625,11 @@ stock LoadModelSelectionMenu(f_name[])
 		if(0 <= mID < 20000)
 		{
 			gItemList[tmp_ItemAmount][mS_ITEM_MODEL] = mID;
-
+		
 			new tmp_mS_strtok[20];
 			new Float:mRotation[3], Float:mZoom = 1.0;
 			new bool:useRotation = false;
-
+			
 			tmp_mS_strtok = mS_strtok(line,idxx);
 			if(tmp_mS_strtok[0]) {
 				useRotation = true;
@@ -667,7 +674,7 @@ stock LoadModelSelectionMenu(f_name[])
 						gRotZoomAmount++;
 					}
 				}
-				else print("-mSelection- WARNING: Not able to save rotation/zoom information. Reached maximum rotation/zoom information count. Increase '#define mS_TOTAL_ROT_ZOOM' to fix the issue");
+				else print("-mSelection- WARNING: Not able to save rotation/zoom information. Reached maximum rotation/zoom information count. Increase '#define mS_TOTAL_ROT_ZOOM' to fix the issue"); 
 			}
 			else gItemList[tmp_ItemAmount][mS_ITEM_ROT_ZOOM_ID] = -1;
 			tmp_ItemAmount++;
@@ -678,16 +685,16 @@ stock LoadModelSelectionMenu(f_name[])
 		gLists[gListAmount][mS_LIST_START] = gItemAmount;
 		gItemAmount = tmp_ItemAmount; // copy back
 		gLists[gListAmount][mS_LIST_END] = (gItemAmount-1);
-
+		
 		gListAmount++;
 		return (gListAmount-1);
 	}
 	printf("-mSelection- WARNING: No Items found in file: %s", f_name);
 	return mS_INVALID_LISTID;
 }
-
-
-
+			
+	
+	
 stock mS_strtok(const string[], &index)
 {
 	new length = strlen(string);
