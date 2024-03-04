@@ -5205,6 +5205,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 SetPlayerSkin(playerid, 285);
                 SetPlayerColor(playerid, COR_AZUL);
                 SetPlayerPos(playerid, 1551.9346, -1675.5179, 16.0681);
+                ShowLoadInt(playerid);
             }
             if (listitem == 1)
             {
@@ -5214,6 +5215,7 @@ public OnDialogResponse(playerid, dialogid, response, listitem, inputtext[])
                 SetPlayerSkin(playerid, 19);
                 SetPlayerColor(playerid, COR_MARROM);
                 SetPlayerPos(playerid, 2583.4858, -873.5188, 84.0401);
+                ShowLoadInt(playerid);
             }
         }
     }
@@ -5567,9 +5569,10 @@ CMD:comandosadm(playerid, params[])
     {
         if (Trabalhando[playerid] < 1) return SCM(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
-            strcat(Str, "{FFFFFF}/trabalhar | /limparchat | /sethora | /setclima | /dv | /car | /setmoney\n");
-            strcat(Str, "{FFFFFF}/setskin   |   /aviso    | /trazer  |   /tvoff  | /tv |  /ir | /setvida\n");
-            strcat(Str, "{FFFFFF}/setarma   |   /daradmin |  /fix    | /trabalhar\n");
+            strcat(Str, "{FFFFFF}/trabalhar | /limparchat | /sethora | /setclima | /dv | /car | /setmoney \n");
+            strcat(Str, "{FFFFFF}/setskin   |   /aviso    | /trazer  |   /tvoff  | /tv |  /ir | /setvida  \n");
+            strcat(Str, "{FFFFFF}/setarma   |   /daradmin |  /fix    | /trabalhar| /esc                   \n");
+            strcat(Str, "{FFFFFF}                                TELEPORTES                               \n");
             strcat(Str, "{FFFFFF}/lobby     |   /favela   |  /dp     |    /ls    | /sf | /lv  | /cachoeira\n");
             ShowPlayerDialog(playerid, D_ADMINISTRADOR, DIALOG_STYLE_MSGBOX, "Comandos Admin - Five Fugas", Str, "-", "");
         }
@@ -6121,7 +6124,7 @@ stock PlayerName(playerid)
 CMD:escolher(playerid, params[])
 {
     if (!PlayerToPoint(2.0, playerid, 3406.7095, -1677.8269, 7.5313))
-        return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce precisa estar no lobby para usar esse comando!");
+    return SendClientMessage(playerid, COR_VERMELHO, "{9900FF}[Five] {FFFFFF}Voce precisa estar no lobby para usar esse comando!");
     ShowPlayerDialog(playerid, DIALOG_ESCOLHER_LADO, DIALOG_STYLE_LIST, "Escolha sua ORG/CORP", "{63AFF0}Policial - {FFFFFF}Funcao Prender os Procurados\n{FB0000}Bandido - {FFFFFF}Funcao Roubar Caixas e Lojas\n", "Escolher", "Fechar");
     return true;
 }

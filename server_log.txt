@@ -1602,3 +1602,50 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [19:24:50] [connection] 127.0.0.1:51396 requests connection cookie.
 [19:24:51] [connection] incoming connection: 127.0.0.1:51396 id: 0
 [19:24:51] [join] The_Julio has joined the server (0:127.0.0.1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[19:31:06] filterscripts = ""  (string)
+[19:31:06] 
+[19:31:06] Server Plugins
+[19:31:06] --------------
+[19:31:06]  Loading plugin: sscanf
+[19:31:06] 
+[19:31:06]  ===============================
+[19:31:06] 
+[19:31:06]       sscanf plugin loaded.     
+[19:31:06] 
+[19:31:06]          Version: 2.13.8
+[19:31:06] 
+[19:31:06]    (c) 2022 Alex "Y_Less" Cole  
+[19:31:06] 
+[19:31:06]  ===============================
+[19:31:06] 
+[19:31:06]   Loaded.
+[19:31:06]  Loading plugin: streamer
+[19:31:06] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[19:31:06]   Loaded.
+[19:31:06]  Loading plugin: discord-connector
+[19:31:07]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[19:31:07]   Loaded.
+[19:31:07]  Loaded 3 plugins.
+
+[19:31:07] 
+[19:31:07] Filterscripts
+[19:31:07] ---------------
+[19:31:07]   Loaded 0 filterscripts.
+
+[19:31:07] Number of vehicle models: 0
+[19:31:08] [connection] 127.0.0.1:64108 requests connection cookie.
+[19:31:09] [connection] incoming connection: 127.0.0.1:64108 id: 0
+[19:31:09] [join] The_Julio has joined the server (0:127.0.0.1)
+[19:37:45] [part] The_Julio has left the server (0:1)
