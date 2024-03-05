@@ -104,6 +104,8 @@
 #define PLAYER_MARKERS_MODE_STREAMED           (2)
 
 // Weapons
+#define UNKNOWN_WEAPON	                       (-1)
+#define WEAPON_FIST	                       (0)
 #define WEAPON_BRASSKNUCKLE                    (1)
 #define WEAPON_GOLFCLUB                        (2)
 #define WEAPON_NITESTICK                       (3)
@@ -262,7 +264,8 @@
 	#error MAX_PICKUPS must be >= 1 and <= 4096
 #endif
 
-//public const SAMP_INCLUDES_VERSION = 0x037030;
+public const SAMP_INCLUDES_VERSION = 0x037030;
+#pragma unused SAMP_INCLUDES_VERSION
 
 #include <core>
 #include <float>
@@ -1697,7 +1700,7 @@ native Menu:GetPlayerMenu(playerid);
 /// </remarks>
 /// <remarks>Keyboard key mapping codes (such as <b><c>~k~~VEHICLE_ENTER_EXIT~</c></b> don't work beyond 255th character. </remarks>
 /// <returns>The ID of the created textdraw. Textdraw IDs start at <b><c>0</c></b>.</returns>
-native CreatePlayerTextDrawText:TextDrawCreate(Float:x, Float:y, const text[]);
+native Text:TextDrawCreate(Float:x, Float:y, const text[]);
 
 /// <summary>Destroys a previously-created textdraw.</summary>
 /// <param name="text">The ID of the textdraw to destroy. Returned by <a href="#TextDrawCreate">TextDrawCreate</a></param>

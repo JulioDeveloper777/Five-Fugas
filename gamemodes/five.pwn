@@ -8,19 +8,9 @@
 #include <foreach>
 #include <discord-cmd>
 #include <discord-connector>
+#include <mapfix>
+
 // #include <td-actions>
-
-//___________MYSQL________________//
-#define HOST      "localhost"
-#define USUARIO   "root"
-#define DATABASE  "FIVE"
-#define SENHA     "five2024"
-
-
-
-//___________PRAGMAS________________//
-// #pragma disablerecursion
-
 
 //___________DEFINES CORES________________//
 #define COR_MARROM 0x993300AA
