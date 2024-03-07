@@ -1,0 +1,17 @@
+
+[ RESOLVER ]
+anims
+ligarv por bind (2)
+farolv por bind (CTRL)
+
+
+mapa conce ao lado de vinewood
+teleporte por mapa
+sair/entrar apertando F
+novo lobby
+/car de admin por nome ou id 
+/virar
+/pintar
+banco de dados trocado
+modularização feita
+
