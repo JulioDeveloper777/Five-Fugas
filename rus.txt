@@ -1,9 +1,0 @@
-C:\Users\julio\Downloads\@downGrade\fifty\Five-Fugas\pawno\include\sscanf2.inc(115) : ôàòàëüíàÿ îøèáêà 111: ïîëüçîâàòåëüñêàÿ îøèáêà: sscanf utilises community compiler features.  Use `#define SSCANF_NO_NICE_FEATURES` to live without (if you can call that living) or better yet download it here: github.com/pawn-lang/compiler/releases
-
-
-Êîìïèëÿöèÿ îñòàíîâëåíà.
-
-Pawn compiler 3.2.3664	 	 	Copyright (c) 1997-2016, ITB CompuPhase
-
-
-Îøèáîê:1.
