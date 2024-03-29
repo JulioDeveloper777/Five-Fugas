@@ -7,114 +7,147 @@ SA-MP Dedicated Server
 ----------------------
 v0.3.7-R2, (C)2005-2015 SA-MP Team
 
-[17:10:15] filterscripts = ""  (string)
-[17:10:15] 
-[17:10:15] Server Plugins
-[17:10:15] --------------
-[17:10:15]  Loading plugin: sscanf
-[17:10:15] 
-[17:10:15]  ===============================
-[17:10:15] 
-[17:10:15]       sscanf plugin loaded.     
-[17:10:15] 
-[17:10:15]          Version: 2.13.8
-[17:10:15] 
-[17:10:15]    (c) 2022 Alex "Y_Less" Cole  
-[17:10:15] 
-[17:10:15]  ===============================
-[17:10:15] 
-[17:10:15]   Loaded.
-[17:10:15]  Loading plugin: streamer
-[17:10:15] 
+[17:35:01] filterscripts = ""  (string)
+[17:35:01] 
+[17:35:01] Server Plugins
+[17:35:01] --------------
+[17:35:01]  Loading plugin: crashdetect
+[17:35:02]   CrashDetect plugin 4.21
+[17:35:02]   Loaded.
+[17:35:02]  Loading plugin: mysql
+[17:35:02]  >> plugin.mysql: R41-4 successfully loaded.
+[17:35:02]   Loaded.
+[17:35:02]  Loading plugin: sscanf
+[17:35:02] 
+[17:35:02]  ===============================
+[17:35:02] 
+[17:35:02]       sscanf plugin loaded.     
+[17:35:02] 
+[17:35:02]          Version: 2.13.8
+[17:35:02] 
+[17:35:02]    (c) 2022 Alex "Y_Less" Cole  
+[17:35:02] 
+[17:35:02]  ===============================
+[17:35:02] 
+[17:35:02]   Loaded.
+[17:35:02]  Loaded 3 plugins.
 
-*** Streamer Plugin v2.9.6 by Incognito loaded ***
+[17:35:02] 
+[17:35:02] Filterscripts
+[17:35:02] ---------------
+[17:35:02]   Loaded 0 filterscripts.
 
-[17:10:15]   Loaded.
-[17:10:15]  Loading plugin: discord-connector
-[17:10:16]  >> plugin.dc-connector: v0.3.5 successfully loaded.
-[17:10:16]   Loaded.
-[17:10:16]  Loaded 3 plugins.
+[17:35:02]  
+[17:35:02]  
+[17:35:02]          ==============================================================
+[17:35:02]          |                                                            |
+[17:35:02]          |                                                            |
+[17:35:02]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[17:35:02]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[17:35:02]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[17:35:02]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[17:35:02]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[17:35:02]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[17:35:02]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[17:35:02]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[17:35:02]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[17:35:02]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[17:35:02]          |           Y:::::Y                    S:::::S   I::::I      |
+[17:35:02]          |           Y:::::Y                    S:::::S   I::::I      |
+[17:35:02]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[17:35:02]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[17:35:02]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[17:35:02]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[17:35:02]          |                                                            |
+[17:35:02]          |                                                            |
+[17:35:02]          |                      (c) 2021 MPL v1.1                     |
+[17:35:02]          |            Alex "Y_Less" Cole and contributors.            |
+[17:35:02]          |                                                            |
+[17:35:02]          |                                                            |
+[17:35:02]          ==============================================================
+[17:35:02]  
+[17:35:02]  
+[17:35:02]  ========================================== 
+[17:35:02]  |                                        | 
+[17:35:02]  |  Missing YSI scriptfiles directories:  | 
+[17:35:02]  |                                        | 
+[17:35:02]  |      /scriptfiles/YSI/fixes/           | 
+[17:35:02]  |      /scriptfiles/YSI/temp/            | 
+[17:35:02]  |                                        | 
+[17:35:02]  ========================================== 
+[17:35:02]  |                                        | 
+[17:35:02]  |   Generating code, this may take a     | 
+[17:35:02]  |  little bit of time.  Note that this   | 
+[17:35:02]  |  code generation works best with the   | 
+[17:35:02]  |     JIT plugin, which you are not      | 
+[17:35:02]  |     currently using.  Get it here:     | 
+[17:35:02]  |                                        | 
+[17:35:02]  |       https://git.io/jit-plugin        | 
+[17:35:02]  |                                        | 
+[17:35:02]  |             Please wait...             | 
+[17:35:02]  |                                        | 
+[17:35:02]  |             Done in 177ms!             | 
+[17:35:02]  |                                        | 
+[17:35:02]  ========================================== 
+[17:35:02]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[17:35:02]  |                                        | 
+[17:35:02]  | Server:      0.3.7-R2 (W)              | 
+[17:35:02]  | Started:     29 Mar 2024 - 17:35:02    | 
+[17:35:02]  |                                        | 
+[17:35:02]  | Compiler:    3.10.10 (Windows)         | 
+[17:35:02]  | Includes:    0.3DL                     | 
+[17:35:02]  | Codepage:    <none>                    | 
+[17:35:02]  | Built:       29 Mar 2024 - 17:34:53    | 
+[17:35:02]  |                                        | 
+[17:35:02]  | YSI:         v05.09.0982               | 
+[17:35:02]  | Master:      -1                        | 
+[17:35:02]  |                                        | 
+[17:35:02]  | JIT:         <none>                    | 
+[17:35:02]  | Crashdetect: <found>                   | 
+[17:35:02]  |                                        | 
+[17:35:02]  ========================================== 
+[17:35:02]  
+[17:35:02] [debug] Long callback execution detected (hang or performance issue)
+[17:35:02] [debug] AMX backtrace:
+[17:35:02] [debug] #0 000059d4 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027ac050 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:1102
+[17:35:02] [debug] #1 00005f5c in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@027ac070 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:2016
+[17:35:02] [debug] #2 0000990c in ScriptInit_PreInitFuncs_ () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_core_entry.inc:558
+[17:35:02] [debug] #3 00002d20 in public ScriptInit_OnPlayerDisconnect () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1867
+[17:35:02]  
+[17:35:02] [debug] Long callback execution detected (hang or performance issue)
+[17:35:02] [debug] AMX backtrace:
+[17:35:02] [debug] #0 0003a05c in _@yHOnGameModeInit@01 () at ../modules/database/connection.pwn:23
+[17:35:02] [debug] #1 0001ccdc in public OnScriptInit@E () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_hooks\..\y_cgen\y_cgen_impl.inc:157
+[17:35:02] [debug] #2 native CallLocalFunction () in samp-server.exe
+[17:35:02] [debug] #3 00002df4 in public ScriptInit_OnPlayerDisconnect () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1900
+[17:35:02] [MYSQL] Banco de dados conectado com sucesso!
+[17:35:02] ===========================================================
 
-[17:10:16] 
-[17:10:16] Filterscripts
-[17:10:16] ---------------
-[17:10:16]   Loaded 0 filterscripts.
+[17:35:02] -----------------------( Running )-------------------------
 
-[17:10:16]  
-[17:10:16]  
-[17:10:16]          ==============================================================
-[17:10:16]          |                                                            |
-[17:10:16]          |                                                            |
-[17:10:16]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
-[17:10:16]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
-[17:10:16]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
-[17:10:16]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
-[17:10:16]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
-[17:10:16]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
-[17:10:16]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
-[17:10:16]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
-[17:10:16]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
-[17:10:16]          |           Y:::::Y               SSSSSS::::S    I::::I      |
-[17:10:16]          |           Y:::::Y                    S:::::S   I::::I      |
-[17:10:16]          |           Y:::::Y                    S:::::S   I::::I      |
-[17:10:16]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
-[17:10:16]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
-[17:10:16]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
-[17:10:16]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
-[17:10:16]          |                                                            |
-[17:10:16]          |                                                            |
-[17:10:16]          |                      (c) 2021 MPL v1.1                     |
-[17:10:16]          |            Alex "Y_Less" Cole and contributors.            |
-[17:10:16]          |                                                            |
-[17:10:16]          |                                                            |
-[17:10:16]          ==============================================================
-[17:10:16]  
-[17:10:16]  
-[17:10:16]  ========================================== 
-[17:10:16]  |                                        | 
-[17:10:16]  |  Missing YSI scriptfiles directories:  | 
-[17:10:16]  |                                        | 
-[17:10:16]  |      /scriptfiles/YSI/fixes/           | 
-[17:10:16]  |      /scriptfiles/YSI/temp/            | 
-[17:10:16]  |                                        | 
-[17:10:16]  ========================================== 
-[17:10:16]  |                                        | 
-[17:10:16]  |   Generating code, this may take a     | 
-[17:10:16]  |  little bit of time.  Note that this   | 
-[17:10:16]  |  code generation works best with the   | 
-[17:10:16]  |     JIT plugin, which you are not      | 
-[17:10:16]  |     currently using.  Get it here:     | 
-[17:10:16]  |                                        | 
-[17:10:16]  |       https://git.io/jit-plugin        | 
-[17:10:16]  |                                        | 
-[17:10:16]  |             Please wait...             | 
-[17:10:16]  |                                        | 
-[17:10:16]  |             Done in 83ms!              | 
-[17:10:16]  |                                        | 
-[17:10:16]  ========================================== 
-[17:10:16]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
-[17:10:16]  |                                        | 
-[17:10:16]  | Server:      0.3.7-R2 (W)              | 
-[17:10:16]  | Started:     07 Mar 2024 - 17:10:16    | 
-[17:10:16]  |                                        | 
-[17:10:16]  | Compiler:    3.10.10 (Windows)         | 
-[17:10:16]  | Includes:    0.3DL                     | 
-[17:10:16]  | Codepage:    <none>                    | 
-[17:10:16]  | Built:       07 Mar 2024 - 17:08:11    | 
-[17:10:16]  |                                        | 
-[17:10:16]  | YSI:         v05.09.0982               | 
-[17:10:16]  | Master:      -1                        | 
-[17:10:16]  |                                        | 
-[17:10:16]  | JIT:         <none>                    | 
-[17:10:16]  | Crashdetect: <none>                    | 
-[17:10:16]  |                                        | 
-[17:10:16]  ========================================== 
-[17:10:16]  
-[17:10:16]  
-[17:10:16] Number of vehicle models: 0
-[17:12:00] [connection] 127.0.0.1:64418 requests connection cookie.
-[17:12:01] [connection] incoming connection: 127.0.0.1:64418 id: 0
-[17:12:01] [join] Julio_Developer has joined the server (0:127.0.0.1)
+[17:35:02] ===========================================================
+
+[17:35:02] Number of vehicle models: 0
+[17:36:38] [connection] incoming connection: 127.0.0.1:62715 id: 0
+[17:36:38] [join] Julio_Developer has joined the server (0:127.0.0.1)
+[17:36:44] [part] Julio_Developer has left the server (0:1)
+[17:36:48] [debug] Server received interrupt signal
+[17:36:48] [debug] Native backtrace:
+[17:36:48] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[17:36:48] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[17:36:48] [debug] #2 0048d53c in ?? () in samp-server.exe
+[17:36:48] [debug] #3 0049b531 in ?? () in samp-server.exe
+[17:36:48] [debug] #4 0049b541 in ?? () in samp-server.exe
+[17:36:48] --- Server Shutting Down.
+[17:36:48] plugin.mysql: Unloading plugin...
+[17:36:48] plugin.mysql: Plugin unloaded.
+[17:36:48] 
+[17:36:48]  ===============================
+[17:36:48] 
+[17:36:48]      sscanf plugin unloaded.    
+[17:36:48] 
+[17:36:48]  ===============================
+[17:36:48] 
 
 ----------
 Loaded log file: "server_log.txt".
@@ -124,116 +157,1030 @@ SA-MP Dedicated Server
 ----------------------
 v0.3.7-R2, (C)2005-2015 SA-MP Team
 
-[17:28:22] filterscripts = ""  (string)
-[17:28:22] 
-[17:28:22] Server Plugins
-[17:28:22] --------------
-[17:28:22]  Loading plugin: sscanf
-[17:28:22] 
-[17:28:22]  ===============================
-[17:28:22] 
-[17:28:22]       sscanf plugin loaded.     
-[17:28:22] 
-[17:28:22]          Version: 2.13.8
-[17:28:22] 
-[17:28:22]    (c) 2022 Alex "Y_Less" Cole  
-[17:28:22] 
-[17:28:22]  ===============================
-[17:28:22] 
-[17:28:22]   Loaded.
-[17:28:22]  Loading plugin: streamer
-[17:28:22] 
+[17:37:24] filterscripts = ""  (string)
+[17:37:24] 
+[17:37:24] Server Plugins
+[17:37:24] --------------
+[17:37:24]  Loading plugin: crashdetect
+[17:37:24]   CrashDetect plugin 4.21
+[17:37:24]   Loaded.
+[17:37:24]  Loading plugin: mysql
+[17:37:24]  >> plugin.mysql: R41-4 successfully loaded.
+[17:37:24]   Loaded.
+[17:37:24]  Loading plugin: sscanf
+[17:37:24] 
+[17:37:24]  ===============================
+[17:37:24] 
+[17:37:24]       sscanf plugin loaded.     
+[17:37:24] 
+[17:37:24]          Version: 2.13.8
+[17:37:24] 
+[17:37:24]    (c) 2022 Alex "Y_Less" Cole  
+[17:37:24] 
+[17:37:24]  ===============================
+[17:37:24] 
+[17:37:24]   Loaded.
+[17:37:24]  Loaded 3 plugins.
+
+[17:37:24] 
+[17:37:24] Filterscripts
+[17:37:24] ---------------
+[17:37:24]   Loaded 0 filterscripts.
+
+[17:37:24]  
+[17:37:24]  
+[17:37:24]          ==============================================================
+[17:37:24]          |                                                            |
+[17:37:24]          |                                                            |
+[17:37:24]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[17:37:24]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[17:37:24]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[17:37:24]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[17:37:24]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[17:37:24]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[17:37:24]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[17:37:24]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[17:37:24]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[17:37:24]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[17:37:24]          |           Y:::::Y                    S:::::S   I::::I      |
+[17:37:24]          |           Y:::::Y                    S:::::S   I::::I      |
+[17:37:24]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[17:37:24]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[17:37:24]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[17:37:24]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[17:37:24]          |                                                            |
+[17:37:24]          |                                                            |
+[17:37:24]          |                      (c) 2021 MPL v1.1                     |
+[17:37:24]          |            Alex "Y_Less" Cole and contributors.            |
+[17:37:24]          |                                                            |
+[17:37:24]          |                                                            |
+[17:37:24]          ==============================================================
+[17:37:24]  
+[17:37:24]  
+[17:37:24]  ========================================== 
+[17:37:24]  |                                        | 
+[17:37:24]  |  Missing YSI scriptfiles directories:  | 
+[17:37:24]  |                                        | 
+[17:37:24]  |      /scriptfiles/YSI/fixes/           | 
+[17:37:24]  |      /scriptfiles/YSI/temp/            | 
+[17:37:24]  |                                        | 
+[17:37:24]  ========================================== 
+[17:37:24]  |                                        | 
+[17:37:24]  |   Generating code, this may take a     | 
+[17:37:24]  |  little bit of time.  Note that this   | 
+[17:37:24]  |  code generation works best with the   | 
+[17:37:24]  |     JIT plugin, which you are not      | 
+[17:37:24]  |     currently using.  Get it here:     | 
+[17:37:24]  |                                        | 
+[17:37:24]  |       https://git.io/jit-plugin        | 
+[17:37:24]  |                                        | 
+[17:37:24]  |             Please wait...             | 
+[17:37:24]  |                                        | 
+[17:37:24]  |             Done in 63ms!              | 
+[17:37:24]  |                                        | 
+[17:37:24]  ========================================== 
+[17:37:24]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[17:37:24]  |                                        | 
+[17:37:24]  | Server:      0.3.7-R2 (W)              | 
+[17:37:24]  | Started:     29 Mar 2024 - 17:37:24    | 
+[17:37:24]  |                                        | 
+[17:37:24]  | Compiler:    3.10.10 (Windows)         | 
+[17:37:24]  | Includes:    0.3DL                     | 
+[17:37:24]  | Codepage:    <none>                    | 
+[17:37:24]  | Built:       29 Mar 2024 - 17:37:15    | 
+[17:37:24]  |                                        | 
+[17:37:24]  | YSI:         v05.09.0982               | 
+[17:37:24]  | Master:      -1                        | 
+[17:37:24]  |                                        | 
+[17:37:24]  | JIT:         <none>                    | 
+[17:37:24]  | Crashdetect: <found>                   | 
+[17:37:24]  |                                        | 
+[17:37:24]  ========================================== 
+[17:37:24]  
+[17:37:24] [debug] Long callback execution detected (hang or performance issue)
+[17:37:24] [debug] AMX backtrace:
+[17:37:24] [debug] #0 00005dd8 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=73, &buffer=@0176fd70 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:1163
+[17:37:24] [debug] #1 00005f38 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@0176fd90 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:2016
+[17:37:24] [debug] #2 00009380 in ScriptInit_PreInitFuncs_ () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_core_entry.inc:558
+[17:37:24] [debug] #3 00002cfc in public ScriptInit_OnPlayerConnect () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1867
+[17:37:24]  
+[17:37:24] [MYSQL] Banco de dados conectado com sucesso!
+[17:37:24] ===========================================================
+
+[17:37:24] -----------------------( Running )-------------------------
+
+[17:37:24] ===========================================================
+
+[17:37:24] Number of vehicle models: 0
+[17:37:51] [connection] incoming connection: 127.0.0.1:61786 id: 0
+[17:37:52] [join] Julio_Developer has joined the server (0:127.0.0.1)
+[17:37:58] [part] Julio_Developer has left the server (0:1)
+[17:38:26] [debug] Server received interrupt signal
+[17:38:26] [debug] Native backtrace:
+[17:38:26] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[17:38:26] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[17:38:26] [debug] #2 0048d53c in ?? () in samp-server.exe
+[17:38:26] [debug] #3 0049b531 in ?? () in samp-server.exe
+[17:38:26] [debug] #4 0049b541 in ?? () in samp-server.exe
+[17:38:26] --- Server Shutting Down.
+[17:38:26] plugin.mysql: Unloading plugin...
+[17:38:26] plugin.mysql: Plugin unloaded.
+[17:38:26] 
+[17:38:26]  ===============================
+[17:38:26] 
+[17:38:26]      sscanf plugin unloaded.    
+[17:38:26] 
+[17:38:26]  ===============================
+[17:38:26] 
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:56:11] filterscripts = ""  (string)
+[17:56:11] 
+[17:56:11] Server Plugins
+[17:56:11] --------------
+[17:56:11]  Loading plugin: crashdetect
+[17:56:11]   CrashDetect plugin 4.21
+[17:56:11]   Loaded.
+[17:56:11]  Loading plugin: mysql
+[17:56:11]  >> plugin.mysql: R41-4 successfully loaded.
+[17:56:11]   Loaded.
+[17:56:11]  Loading plugin: sscanf
+[17:56:11] 
+[17:56:11]  ===============================
+[17:56:11] 
+[17:56:11]       sscanf plugin loaded.     
+[17:56:11] 
+[17:56:11]          Version: 2.13.8
+[17:56:11] 
+[17:56:11]    (c) 2022 Alex "Y_Less" Cole  
+[17:56:11] 
+[17:56:11]  ===============================
+[17:56:11] 
+[17:56:11]   Loaded.
+[17:56:11]  Loaded 3 plugins.
+
+[17:56:11] 
+[17:56:11] Filterscripts
+[17:56:11] ---------------
+[17:56:11]   Loaded 0 filterscripts.
+
+[17:56:11]  
+[17:56:11]  
+[17:56:11]          ==============================================================
+[17:56:11]          |                                                            |
+[17:56:11]          |                                                            |
+[17:56:11]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[17:56:11]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[17:56:11]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[17:56:11]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[17:56:11]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[17:56:11]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[17:56:11]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[17:56:11]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[17:56:11]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[17:56:11]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[17:56:11]          |           Y:::::Y                    S:::::S   I::::I      |
+[17:56:11]          |           Y:::::Y                    S:::::S   I::::I      |
+[17:56:11]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[17:56:11]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[17:56:11]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[17:56:11]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[17:56:11]          |                                                            |
+[17:56:11]          |                                                            |
+[17:56:11]          |                      (c) 2021 MPL v1.1                     |
+[17:56:11]          |            Alex "Y_Less" Cole and contributors.            |
+[17:56:11]          |                                                            |
+[17:56:11]          |                                                            |
+[17:56:11]          ==============================================================
+[17:56:11]  
+[17:56:11]  
+[17:56:11]  ========================================== 
+[17:56:11]  |                                        | 
+[17:56:11]  |  Missing YSI scriptfiles directories:  | 
+[17:56:11]  |                                        | 
+[17:56:11]  |      /scriptfiles/YSI/fixes/           | 
+[17:56:11]  |      /scriptfiles/YSI/temp/            | 
+[17:56:11]  |                                        | 
+[17:56:11]  ========================================== 
+[17:56:11]  |                                        | 
+[17:56:11]  |   Generating code, this may take a     | 
+[17:56:11]  |  little bit of time.  Note that this   | 
+[17:56:11]  |  code generation works best with the   | 
+[17:56:11]  |     JIT plugin, which you are not      | 
+[17:56:11]  |     currently using.  Get it here:     | 
+[17:56:11]  |                                        | 
+[17:56:11]  |       https://git.io/jit-plugin        | 
+[17:56:11]  |                                        | 
+[17:56:11]  |             Please wait...             | 
+[17:56:11]  |                                        | 
+[17:56:11]  |             Done in 60ms!              | 
+[17:56:11]  |                                        | 
+[17:56:11]  ========================================== 
+[17:56:11]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[17:56:12]  |                                        | 
+[17:56:12]  | Server:      0.3.7-R2 (W)              | 
+[17:56:12]  | Started:     29 Mar 2024 - 17:56:11    | 
+[17:56:12]  |                                        | 
+[17:56:12]  | Compiler:    3.10.10 (Windows)         | 
+[17:56:12]  | Includes:    0.3DL                     | 
+[17:56:12]  | Codepage:    <none>                    | 
+[17:56:12]  | Built:       29 Mar 2024 - 17:53:37    | 
+[17:56:12]  |                                        | 
+[17:56:12]  | YSI:         v05.09.0982               | 
+[17:56:12]  | Master:      -1                        | 
+[17:56:12]  |                                        | 
+[17:56:12]  | JIT:         <none>                    | 
+[17:56:12]  | Crashdetect: <found>                   | 
+[17:56:12]  |                                        | 
+[17:56:12]  ========================================== 
+[17:56:12]  
+[17:56:12] [debug] Long callback execution detected (hang or performance issue)
+[17:56:12] [debug] AMX backtrace:
+[17:56:12] [debug] #0 00005dcc in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=9, &buffer=@0176fd70 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:1161
+[17:56:12] [debug] #1 00005f38 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@0176fd90 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:2016
+[17:56:12] [debug] #2 00009380 in ScriptInit_PreInitFuncs_ () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_core_entry.inc:558
+[17:56:12] [debug] #3 00002cfc in public ScriptInit_OnPlayerConnect () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1867
+[17:56:12]  
+[17:56:12] [MYSQL] Banco de dados conectado com sucesso!
+[17:56:12] ===========================================================
+
+[17:56:12] -----------------------( Running )-------------------------
+
+[17:56:12] ===========================================================
+
+[17:56:12] Number of vehicle models: 0
+[17:56:36] [connection] incoming connection: 127.0.0.1:59481 id: 0
+[17:56:36] [join] Julio_Developer has joined the server (0:127.0.0.1)
+[17:56:45] [part] Julio_Developer has left the server (0:1)
+[18:00:25] [debug] Server received interrupt signal
+[18:00:26] [debug] Native backtrace:
+[18:00:26] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[18:00:26] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[18:00:26] [debug] #2 0048d53c in ?? () in samp-server.exe
+[18:00:26] [debug] #3 0049b531 in ?? () in samp-server.exe
+[18:00:26] [debug] #4 0049b541 in ?? () in samp-server.exe
+[18:00:26] --- Server Shutting Down.
+[18:00:26] plugin.mysql: Unloading plugin...
+[18:00:26] plugin.mysql: Plugin unloaded.
+[18:00:26] 
+[18:00:26]  ===============================
+[18:00:26] 
+[18:00:26]      sscanf plugin unloaded.    
+[18:00:26] 
+[18:00:26]  ===============================
+[18:00:26] 
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:26:40] filterscripts = ""  (string)
+[18:26:40] 
+[18:26:40] Server Plugins
+[18:26:40] --------------
+[18:26:40]  Loading plugin: crashdetect
+[18:26:40]   CrashDetect plugin 4.21
+[18:26:40]   Loaded.
+[18:26:40]  Loading plugin: mysql
+[18:26:40]  >> plugin.mysql: R41-4 successfully loaded.
+[18:26:40]   Loaded.
+[18:26:40]  Loading plugin: sscanf
+[18:26:40] 
+[18:26:40]  ===============================
+[18:26:40] 
+[18:26:40]       sscanf plugin loaded.     
+[18:26:40] 
+[18:26:40]          Version: 2.13.8
+[18:26:40] 
+[18:26:40]    (c) 2022 Alex "Y_Less" Cole  
+[18:26:40] 
+[18:26:40]  ===============================
+[18:26:40] 
+[18:26:40]   Loaded.
+[18:26:40]  Loaded 3 plugins.
+
+[18:26:41] 
+[18:26:41] Filterscripts
+[18:26:41] ---------------
+[18:26:41]   Loaded 0 filterscripts.
+
+[18:26:41] [debug] Run time error 19: "File or function is not found"
+[18:26:41] [debug]  DCC_GetMessageContent
+[18:26:41] [debug]  DCC_GetMessageAuthor
+[18:26:41] [debug]  DCC_GetMessageChannel
+[18:26:41] [debug]  DCC_IsUserBot
+[18:26:41] [debug]  DCC_FindChannelById
+[18:26:41] [debug]  DCC_CreateEmbed
+[18:26:41] [debug]  DCC_SendChannelEmbedMessage
+[18:26:41] [debug]  DCC_SendChannelMessage
+[18:26:41] [debug]  CreateDynamicObject
+[18:26:41] [debug]  SetDynamicObjectMaterial
+[18:26:41] [debug]  SetDynamicObjectMaterialText
+[18:26:41] [debug] Run time error 19: "File or function is not found"
+[18:26:41] [debug]  DCC_GetMessageContent
+[18:26:41] [debug]  DCC_GetMessageAuthor
+[18:26:41] [debug]  DCC_GetMessageChannel
+[18:26:41] [debug]  DCC_IsUserBot
+[18:26:41] [debug]  DCC_FindChannelById
+[18:26:41] [debug]  DCC_CreateEmbed
+[18:26:41] [debug]  DCC_SendChannelEmbedMessage
+[18:26:41] [debug]  DCC_SendChannelMessage
+[18:26:41] [debug]  CreateDynamicObject
+[18:26:41] [debug]  SetDynamicObjectMaterial
+[18:26:41] [debug]  SetDynamicObjectMaterialText
+[18:26:41] Script[gamemodes/five.amx]: Run time error 19: "File or function is not found"
+[18:26:41] Number of vehicle models: 0
+[18:27:22] [debug] Server received interrupt signal
+[18:27:22] [debug] Native backtrace:
+[18:27:22] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[18:27:22] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[18:27:22] [debug] #2 0048d53c in ?? () in samp-server.exe
+[18:27:22] [debug] #3 0049b531 in ?? () in samp-server.exe
+[18:27:22] [debug] #4 0049b541 in ?? () in samp-server.exe
+[18:27:22] --- Server Shutting Down.
+[18:27:22] [debug] Run time error 19: "File or function is not found"
+[18:27:22] [debug]  DCC_GetMessageContent
+[18:27:22] [debug]  DCC_GetMessageAuthor
+[18:27:22] [debug]  DCC_GetMessageChannel
+[18:27:22] [debug]  DCC_IsUserBot
+[18:27:22] [debug]  DCC_FindChannelById
+[18:27:22] [debug]  DCC_CreateEmbed
+[18:27:22] [debug]  DCC_SendChannelEmbedMessage
+[18:27:22] [debug]  DCC_SendChannelMessage
+[18:27:22] [debug]  CreateDynamicObject
+[18:27:22] [debug]  SetDynamicObjectMaterial
+[18:27:22] [debug]  SetDynamicObjectMaterialText
+[18:27:22] plugin.mysql: Unloading plugin...
+[18:27:22] plugin.mysql: Plugin unloaded.
+[18:27:22] 
+[18:27:22]  ===============================
+[18:27:22] 
+[18:27:22]      sscanf plugin unloaded.    
+[18:27:22] 
+[18:27:22]  ===============================
+[18:27:22] 
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:27:37] filterscripts = ""  (string)
+[18:27:37] 
+[18:27:37] Server Plugins
+[18:27:37] --------------
+[18:27:37]  Loading plugin: crashdetect
+[18:27:37]   CrashDetect plugin 4.21
+[18:27:37]   Loaded.
+[18:27:37]  Loading plugin: discord-connector
+[18:27:38]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[18:27:38]   Loaded.
+[18:27:38]  Loading plugin: mysql
+[18:27:38]  >> plugin.mysql: R41-4 successfully loaded.
+[18:27:38]   Loaded.
+[18:27:38]  Loading plugin: sscanf
+[18:27:38] 
+[18:27:38]  ===============================
+[18:27:38] 
+[18:27:38]       sscanf plugin loaded.     
+[18:27:38] 
+[18:27:38]          Version: 2.13.8
+[18:27:38] 
+[18:27:38]    (c) 2022 Alex "Y_Less" Cole  
+[18:27:38] 
+[18:27:38]  ===============================
+[18:27:38] 
+[18:27:38]   Loaded.
+[18:27:38]  Loading plugin: streamer
+[18:27:38] 
 
 *** Streamer Plugin v2.9.6 by Incognito loaded ***
 
-[17:28:22]   Loaded.
-[17:28:22]  Loading plugin: discord-connector
-[17:28:22]  >> plugin.dc-connector: v0.3.5 successfully loaded.
-[17:28:22]   Loaded.
-[17:28:22]  Loaded 3 plugins.
+[18:27:38]   Loaded.
+[18:27:38]  Loaded 5 plugins.
 
-[17:28:22] 
-[17:28:22] Filterscripts
-[17:28:22] ---------------
-[17:28:22]   Loaded 0 filterscripts.
+[18:27:38] 
+[18:27:38] Filterscripts
+[18:27:38] ---------------
+[18:27:38]   Loaded 0 filterscripts.
 
-[17:28:23]  
-[17:28:23]  
-[17:28:23]          ==============================================================
-[17:28:23]          |                                                            |
-[17:28:23]          |                                                            |
-[17:28:23]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
-[17:28:23]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
-[17:28:23]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
-[17:28:23]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
-[17:28:23]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
-[17:28:23]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
-[17:28:23]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
-[17:28:23]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
-[17:28:23]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
-[17:28:23]          |           Y:::::Y               SSSSSS::::S    I::::I      |
-[17:28:23]          |           Y:::::Y                    S:::::S   I::::I      |
-[17:28:23]          |           Y:::::Y                    S:::::S   I::::I      |
-[17:28:23]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
-[17:28:23]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
-[17:28:23]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
-[17:28:23]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
-[17:28:23]          |                                                            |
-[17:28:23]          |                                                            |
-[17:28:23]          |                      (c) 2021 MPL v1.1                     |
-[17:28:23]          |            Alex "Y_Less" Cole and contributors.            |
-[17:28:23]          |                                                            |
-[17:28:23]          |                                                            |
-[17:28:23]          ==============================================================
-[17:28:23]  
-[17:28:23]  
-[17:28:23]  ========================================== 
-[17:28:23]  |                                        | 
-[17:28:23]  |  Missing YSI scriptfiles directories:  | 
-[17:28:23]  |                                        | 
-[17:28:23]  |      /scriptfiles/YSI/fixes/           | 
-[17:28:23]  |      /scriptfiles/YSI/temp/            | 
-[17:28:23]  |                                        | 
-[17:28:23]  ========================================== 
-[17:28:23]  |                                        | 
-[17:28:23]  |   Generating code, this may take a     | 
-[17:28:23]  |  little bit of time.  Note that this   | 
-[17:28:23]  |  code generation works best with the   | 
-[17:28:23]  |     JIT plugin, which you are not      | 
-[17:28:23]  |     currently using.  Get it here:     | 
-[17:28:23]  |                                        | 
-[17:28:23]  |       https://git.io/jit-plugin        | 
-[17:28:23]  |                                        | 
-[17:28:23]  |             Please wait...             | 
-[17:28:23]  |                                        | 
-[17:28:23]  |             Done in 79ms!              | 
-[17:28:23]  |                                        | 
-[17:28:23]  ========================================== 
-[17:28:23]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
-[17:28:23]  |                                        | 
-[17:28:23]  | Server:      0.3.7-R2 (W)              | 
-[17:28:23]  | Started:     07 Mar 2024 - 17:28:23    | 
-[17:28:23]  |                                        | 
-[17:28:23]  | Compiler:    3.10.10 (Windows)         | 
-[17:28:23]  | Includes:    0.3DL                     | 
-[17:28:23]  | Codepage:    <none>                    | 
-[17:28:23]  | Built:       07 Mar 2024 - 17:28:00    | 
-[17:28:23]  |                                        | 
-[17:28:23]  | YSI:         v05.09.0982               | 
-[17:28:23]  | Master:      -1                        | 
-[17:28:23]  |                                        | 
-[17:28:23]  | JIT:         <none>                    | 
-[17:28:23]  | Crashdetect: <none>                    | 
-[17:28:23]  |                                        | 
-[17:28:23]  ========================================== 
-[17:28:23]  
-[17:28:23]  
-[17:28:23] Number of vehicle models: 0
-[17:28:29] [connection] 127.0.0.1:49276 requests connection cookie.
-[17:28:30] [connection] incoming connection: 127.0.0.1:49276 id: 0
-[17:28:30] [join] Julio_Developer has joined the server (0:127.0.0.1)
-[17:28:44] [part] Julio_Developer has left the server (0:1)
-[17:29:06] [connection] 127.0.0.1:54058 requests connection cookie.
-[17:29:07] [connection] incoming connection: 127.0.0.1:54058 id: 0
-[17:29:07] [join] Julio_Developer has joined the server (0:127.0.0.1)
-[17:29:46] [part] Julio_Developer has left the server (0:1)
+[18:27:38]  
+[18:27:38]  
+[18:27:38]          ==============================================================
+[18:27:38]          |                                                            |
+[18:27:38]          |                                                            |
+[18:27:38]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[18:27:38]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[18:27:38]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[18:27:38]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[18:27:38]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[18:27:38]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[18:27:38]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[18:27:38]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[18:27:38]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[18:27:38]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[18:27:38]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:27:38]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:27:38]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[18:27:38]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[18:27:38]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[18:27:38]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[18:27:38]          |                                                            |
+[18:27:38]          |                                                            |
+[18:27:38]          |                      (c) 2021 MPL v1.1                     |
+[18:27:38]          |            Alex "Y_Less" Cole and contributors.            |
+[18:27:38]          |                                                            |
+[18:27:38]          |                                                            |
+[18:27:38]          ==============================================================
+[18:27:38]  
+[18:27:38]  
+[18:27:38]  ========================================== 
+[18:27:38]  |                                        | 
+[18:27:38]  |  Missing YSI scriptfiles directories:  | 
+[18:27:38]  |                                        | 
+[18:27:38]  |      /scriptfiles/YSI/fixes/           | 
+[18:27:38]  |      /scriptfiles/YSI/temp/            | 
+[18:27:38]  |                                        | 
+[18:27:38]  ========================================== 
+[18:27:38]  |                                        | 
+[18:27:38]  |   Generating code, this may take a     | 
+[18:27:38]  |  little bit of time.  Note that this   | 
+[18:27:38]  |  code generation works best with the   | 
+[18:27:38]  |     JIT plugin, which you are not      | 
+[18:27:38]  |     currently using.  Get it here:     | 
+[18:27:38]  |                                        | 
+[18:27:38]  |       https://git.io/jit-plugin        | 
+[18:27:38]  |                                        | 
+[18:27:38]  |             Please wait...             | 
+[18:27:38]  |                                        | 
+[18:27:38]  |             Done in 324ms!             | 
+[18:27:38]  |                                        | 
+[18:27:38]  ========================================== 
+[18:27:38]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[18:27:38]  |                                        | 
+[18:27:38]  | Server:      0.3.7-R2 (W)              | 
+[18:27:38]  | Started:     29 Mar 2024 - 18:27:38    | 
+[18:27:38]  |                                        | 
+[18:27:38]  | Compiler:    3.10.10 (Windows)         | 
+[18:27:38]  | Includes:    0.3DL                     | 
+[18:27:38]  | Codepage:    <none>                    | 
+[18:27:38]  | Built:       29 Mar 2024 - 18:26:20    | 
+[18:27:38]  |                                        | 
+[18:27:38]  | YSI:         v05.09.0982               | 
+[18:27:38]  | Master:      -1                        | 
+[18:27:38]  |                                        | 
+[18:27:38]  | JIT:         <none>                    | 
+[18:27:38]  | Crashdetect: <found>                   | 
+[18:27:38]  |                                        | 
+[18:27:38]  ========================================== 
+[18:27:38]  
+[18:27:38]  
+[18:27:38] [MYSQL] Banco de dados conectado com sucesso!
+[18:27:38] [debug] Long callback execution detected (hang or performance issue)
+[18:27:38] [debug] AMX backtrace:
+[18:27:38] [debug] #0 0002cc2c in Iter_Prev_InternalD (array[]=@00f5c594 "", size=1001, slot=999) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_timers\..\..\YSI_Data\y_foreach\y_foreach_impl.inc:1327
+[18:27:38] [debug] #1 0002c0f4 in Iter_Add_InternalC (&count=@00f5d538 1, array[]=@00f5c594 "", size=1000, value=1) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_timers\..\..\YSI_Data\y_foreach\y_foreach_impl.inc:792
+[18:27:38] [debug] #2 0002efcc in public Iter_ActorDo (1, 1) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_timers\..\..\YSI_Data\y_foreach\y_foreach_iterators.inc:904
+[18:27:38] [debug] #3 native CallRemoteFunction () in samp-server.exe
+[18:27:38] [debug] #4 0002f130 in Iter_CreateActor (modelid=293, Float:X=1636.46692, Float:Y=-1366.13867, Float:Z=331.40631, Float:Rotation=85.87240) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_timers\..\..\YSI_Data\y_foreach\y_foreach_iterators.inc:913
+[18:27:38] [debug] #5 0004ed34 in _@yHOnGameModeInit@0G () at ../modules/maps/objects/index.pwn:12
+[18:27:38] [debug] #6 000191a0 in public OnScriptInit@E () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_timers\..\y_malloc\..\y_cgen\y_cgen_impl.inc:157
+[18:27:38] [debug] #7 native CallLocalFunction () in samp-server.exe
+[18:27:38] [debug] #8 00002df4 in public cmd_apontar () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_timers\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1900
+[18:27:38] ===========================================================
+
+[18:27:38] -----------------------( Running )-------------------------
+
+[18:27:38] ===========================================================
+
+[18:27:38] Number of vehicle models: 0
+[18:28:03] [connection] incoming connection: 127.0.0.1:50720 id: 0
+[18:28:03] [join] Julio_Developer has joined the server (0:127.0.0.1)
+[18:28:09] [part] Julio_Developer has left the server (0:1)
+[18:28:27] [debug] Server received interrupt signal
+[18:28:27] [debug] Native backtrace:
+[18:28:27] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[18:28:27] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[18:28:27] [debug] #2 0048d53c in ?? () in samp-server.exe
+[18:28:27] [debug] #3 0049b531 in ?? () in samp-server.exe
+[18:28:27] [debug] #4 0049b541 in ?? () in samp-server.exe
+[18:28:27] --- Server Shutting Down.
+[18:28:27] plugin.dc-connector: Unloading plugin...
+[18:28:28] plugin.dc-connector: Plugin unloaded.
+[18:28:28] plugin.mysql: Unloading plugin...
+[18:28:28] plugin.mysql: Plugin unloaded.
+[18:28:28] 
+[18:28:28]  ===============================
+[18:28:28] 
+[18:28:28]      sscanf plugin unloaded.    
+[18:28:28] 
+[18:28:28]  ===============================
+[18:28:28] 
+[18:28:28] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:35:10] filterscripts = ""  (string)
+[18:35:10] 
+[18:35:10] Server Plugins
+[18:35:10] --------------
+[18:35:10]  Loading plugin: crashdetect
+[18:35:10]   CrashDetect plugin 4.21
+[18:35:10]   Loaded.
+[18:35:10]  Loading plugin: discord-connector
+[18:35:11]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[18:35:11]   Loaded.
+[18:35:11]  Loading plugin: mysql
+[18:35:11]  >> plugin.mysql: R41-4 successfully loaded.
+[18:35:11]   Loaded.
+[18:35:11]  Loading plugin: sscanf
+[18:35:11] 
+[18:35:11]  ===============================
+[18:35:11] 
+[18:35:11]       sscanf plugin loaded.     
+[18:35:11] 
+[18:35:11]          Version: 2.13.8
+[18:35:11] 
+[18:35:11]    (c) 2022 Alex "Y_Less" Cole  
+[18:35:11] 
+[18:35:11]  ===============================
+[18:35:11] 
+[18:35:11]   Loaded.
+[18:35:11]  Loading plugin: streamer
+[18:35:11] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[18:35:11]   Loaded.
+[18:35:11]  Loaded 5 plugins.
+
+[18:35:11] 
+[18:35:11] Filterscripts
+[18:35:11] ---------------
+[18:35:11]   Loaded 0 filterscripts.
+
+[18:35:11]  
+[18:35:11]  
+[18:35:11]          ==============================================================
+[18:35:11]          |                                                            |
+[18:35:11]          |                                                            |
+[18:35:11]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[18:35:11]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[18:35:11]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[18:35:11]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[18:35:11]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[18:35:11]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[18:35:11]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[18:35:11]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[18:35:11]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[18:35:11]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[18:35:11]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:35:11]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:35:11]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[18:35:11]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[18:35:11]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[18:35:11]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[18:35:11]          |                                                            |
+[18:35:11]          |                                                            |
+[18:35:11]          |                      (c) 2021 MPL v1.1                     |
+[18:35:11]          |            Alex "Y_Less" Cole and contributors.            |
+[18:35:11]          |                                                            |
+[18:35:11]          |                                                            |
+[18:35:11]          ==============================================================
+[18:35:11]  
+[18:35:11]  
+[18:35:11]  ========================================== 
+[18:35:11]  |                                        | 
+[18:35:11]  |  Missing YSI scriptfiles directories:  | 
+[18:35:11]  |                                        | 
+[18:35:11]  |      /scriptfiles/YSI/fixes/           | 
+[18:35:11]  |      /scriptfiles/YSI/temp/            | 
+[18:35:11]  |                                        | 
+[18:35:11]  ========================================== 
+[18:35:11]  |                                        | 
+[18:35:11]  |   Generating code, this may take a     | 
+[18:35:11]  |  little bit of time.  Note that this   | 
+[18:35:11]  |  code generation works best with the   | 
+[18:35:11]  |     JIT plugin, which you are not      | 
+[18:35:11]  |     currently using.  Get it here:     | 
+[18:35:11]  |                                        | 
+[18:35:11]  |       https://git.io/jit-plugin        | 
+[18:35:11]  |                                        | 
+[18:35:11]  |             Please wait...             | 
+[18:35:11]  |                                        | 
+[18:35:11]  |             Done in 152ms!             | 
+[18:35:11]  |                                        | 
+[18:35:11]  ========================================== 
+[18:35:11]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[18:35:11]  |                                        | 
+[18:35:11]  | Server:      0.3.7-R2 (W)              | 
+[18:35:11]  | Started:     29 Mar 2024 - 18:35:11    | 
+[18:35:11]  |                                        | 
+[18:35:11]  | Compiler:    3.10.10 (Windows)         | 
+[18:35:11]  | Includes:    0.3DL                     | 
+[18:35:11]  | Codepage:    <none>                    | 
+[18:35:11]  | Built:       29 Mar 2024 - 18:34:53    | 
+[18:35:11]  |                                        | 
+[18:35:11]  | YSI:         v05.09.0982               | 
+[18:35:11]  | Master:      -1                        | 
+[18:35:11]  |                                        | 
+[18:35:11]  | JIT:         <none>                    | 
+[18:35:11]  | Crashdetect: <found>                   | 
+[18:35:11]  |                                        | 
+[18:35:11]  ========================================== 
+[18:35:11]  
+[18:35:11] [debug] Long callback execution detected (hang or performance issue)
+[18:35:11] [debug] AMX backtrace:
+[18:35:11] [debug] #0 00005df0 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=63, &buffer=@0179ae18 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:1165
+[18:35:11] [debug] #1 00005f38 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@0179ae38 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:2016
+[18:35:11] [debug] #2 00009380 in ScriptInit_PreInitFuncs_ () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_core_entry.inc:558
+[18:35:11] [debug] #3 00002cfc in public cmd_bebado () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1867
+[18:35:11]  
+[18:35:11] [MYSQL] Banco de dados conectado com sucesso!
+[18:35:11] [debug] Long callback execution detected (hang or performance issue)
+[18:35:11] [debug] AMX backtrace:
+[18:35:11] [debug] #0 0005077c in _@yHOnGameModeInit@0H () at ../modules/maps/exteriors/airport.pwn:89
+[18:35:11] [debug] #1 0001ccdc in public OnScriptInit@E () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_hooks\..\y_cgen\y_cgen_impl.inc:157
+[18:35:11] [debug] #2 native CallLocalFunction () in samp-server.exe
+[18:35:11] [debug] #3 00002dd0 in public cmd_bebado () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1900
+[18:35:11] ===========================================================
+
+[18:35:11] -----------------------( Running )-------------------------
+
+[18:35:11] ===========================================================
+
+[18:35:11] Number of vehicle models: 0
+[18:36:30] [debug] Server received interrupt signal
+[18:36:30] [debug] Native backtrace:
+[18:36:30] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[18:36:30] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[18:36:30] [debug] #2 0048d53c in ?? () in samp-server.exe
+[18:36:30] [debug] #3 0049b531 in ?? () in samp-server.exe
+[18:36:30] [debug] #4 0049b541 in ?? () in samp-server.exe
+[18:36:30] --- Server Shutting Down.
+[18:36:30] plugin.dc-connector: Unloading plugin...
+[18:36:31] plugin.dc-connector: Plugin unloaded.
+[18:36:31] plugin.mysql: Unloading plugin...
+[18:36:31] plugin.mysql: Plugin unloaded.
+[18:36:31] 
+[18:36:31]  ===============================
+[18:36:31] 
+[18:36:31]      sscanf plugin unloaded.    
+[18:36:31] 
+[18:36:31]  ===============================
+[18:36:31] 
+[18:36:31] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:36:35] filterscripts = ""  (string)
+[18:36:35] 
+[18:36:35] Server Plugins
+[18:36:35] --------------
+[18:36:35]  Loading plugin: crashdetect
+[18:36:35]   CrashDetect plugin 4.21
+[18:36:35]   Loaded.
+[18:36:35]  Loading plugin: discord-connector
+[18:36:35]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[18:36:35]   Loaded.
+[18:36:35]  Loading plugin: mysql
+[18:36:35]  >> plugin.mysql: R41-4 successfully loaded.
+[18:36:35]   Loaded.
+[18:36:35]  Loading plugin: sscanf
+[18:36:35] 
+[18:36:35]  ===============================
+[18:36:35] 
+[18:36:35]       sscanf plugin loaded.     
+[18:36:35] 
+[18:36:35]          Version: 2.13.8
+[18:36:35] 
+[18:36:35]    (c) 2022 Alex "Y_Less" Cole  
+[18:36:35] 
+[18:36:35]  ===============================
+[18:36:35] 
+[18:36:35]   Loaded.
+[18:36:35]  Loading plugin: streamer
+[18:36:35] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[18:36:35]   Loaded.
+[18:36:35]  Loaded 5 plugins.
+
+[18:36:35] 
+[18:36:35] Filterscripts
+[18:36:35] ---------------
+[18:36:35]   Loaded 0 filterscripts.
+
+[18:36:36]  
+[18:36:36]  
+[18:36:36]          ==============================================================
+[18:36:36]          |                                                            |
+[18:36:36]          |                                                            |
+[18:36:36]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[18:36:36]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[18:36:36]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[18:36:36]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[18:36:36]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[18:36:36]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[18:36:36]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[18:36:36]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[18:36:36]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[18:36:36]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[18:36:36]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:36:36]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:36:36]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[18:36:36]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[18:36:36]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[18:36:36]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[18:36:36]          |                                                            |
+[18:36:36]          |                                                            |
+[18:36:36]          |                      (c) 2021 MPL v1.1                     |
+[18:36:36]          |            Alex "Y_Less" Cole and contributors.            |
+[18:36:36]          |                                                            |
+[18:36:36]          |                                                            |
+[18:36:36]          ==============================================================
+[18:36:36]  
+[18:36:36]  
+[18:36:36]  ========================================== 
+[18:36:36]  |                                        | 
+[18:36:36]  |  Missing YSI scriptfiles directories:  | 
+[18:36:36]  |                                        | 
+[18:36:36]  |      /scriptfiles/YSI/fixes/           | 
+[18:36:36]  |      /scriptfiles/YSI/temp/            | 
+[18:36:36]  |                                        | 
+[18:36:36]  ========================================== 
+[18:36:36]  |                                        | 
+[18:36:36]  |   Generating code, this may take a     | 
+[18:36:36]  |  little bit of time.  Note that this   | 
+[18:36:36]  |  code generation works best with the   | 
+[18:36:36]  |     JIT plugin, which you are not      | 
+[18:36:36]  |     currently using.  Get it here:     | 
+[18:36:36]  |                                        | 
+[18:36:36]  |       https://git.io/jit-plugin        | 
+[18:36:36]  |                                        | 
+[18:36:36]  |             Please wait...             | 
+[18:36:36]  |                                        | 
+[18:36:36]  |             Done in 304ms!             | 
+[18:36:36]  |                                        | 
+[18:36:36]  ========================================== 
+[18:36:36]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[18:36:36]  |                                        | 
+[18:36:36]  | Server:      0.3.7-R2 (W)              | 
+[18:36:36]  | Started:     29 Mar 2024 - 18:36:36    | 
+[18:36:36]  |                                        | 
+[18:36:36]  | Compiler:    3.10.10 (Windows)         | 
+[18:36:36]  | Includes:    0.3DL                     | 
+[18:36:36]  | Codepage:    <none>                    | 
+[18:36:36]  | Built:       29 Mar 2024 - 18:34:53    | 
+[18:36:36]  |                                        | 
+[18:36:36]  | YSI:         v05.09.0982               | 
+[18:36:36]  | Master:      -1                        | 
+[18:36:36]  |                                        | 
+[18:36:36]  | JIT:         <none>                    | 
+[18:36:36]  | Crashdetect: <found>                   | 
+[18:36:36]  |                                        | 
+[18:36:36]  ========================================== 
+[18:36:36]  
+[18:36:36] [debug] Long callback execution detected (hang or performance issue)
+[18:36:36] [debug] AMX backtrace:
+[18:36:36] [debug] #0 00005df0 in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=63, &buffer=@0179ae18 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:1165
+[18:36:36] [debug] #1 00005f38 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@0179ae38 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:2016
+[18:36:36] [debug] #2 00009380 in ScriptInit_PreInitFuncs_ () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_core_entry.inc:558
+[18:36:36] [debug] #3 00002cfc in public cmd_bebado () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1867
+[18:36:36]  
+[18:36:36] [MYSQL] Banco de dados conectado com sucesso!
+[18:36:36] [debug] Long callback execution detected (hang or performance issue)
+[18:36:36] [debug] AMX backtrace:
+[18:36:36] [debug] #0 0005077c in _@yHOnGameModeInit@0H () at ../modules/maps/exteriors/airport.pwn:89
+[18:36:36] [debug] #1 0001ccdc in public OnScriptInit@E () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_hooks\..\y_cgen\y_cgen_impl.inc:157
+[18:36:36] [debug] #2 native CallLocalFunction () in samp-server.exe
+[18:36:36] [debug] #3 00002dd0 in public cmd_bebado () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1900
+[18:36:36] ===========================================================
+
+[18:36:36] -----------------------( Running )-------------------------
+
+[18:36:36] ===========================================================
+
+[18:36:36] Number of vehicle models: 0
+[18:36:37] [debug] Server received interrupt signal
+[18:36:37] [debug] Native backtrace:
+[18:36:37] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[18:36:37] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[18:36:37] [debug] #2 0048d53c in ?? () in samp-server.exe
+[18:36:37] [debug] #3 0049b531 in ?? () in samp-server.exe
+[18:36:37] [debug] #4 0049b541 in ?? () in samp-server.exe
+[18:36:37] --- Server Shutting Down.
+[18:36:37] plugin.dc-connector: Unloading plugin...
+[18:36:39] plugin.dc-connector: Plugin unloaded.
+[18:36:39] plugin.mysql: Unloading plugin...
+[18:36:39] plugin.mysql: Plugin unloaded.
+[18:36:39] 
+[18:36:39]  ===============================
+[18:36:39] 
+[18:36:39]      sscanf plugin unloaded.    
+[18:36:39] 
+[18:36:39]  ===============================
+[18:36:39] 
+[18:36:39] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:36:57] filterscripts = ""  (string)
+[18:36:57] 
+[18:36:57] Server Plugins
+[18:36:57] --------------
+[18:36:57]  Loading plugin: crashdetect
+[18:36:57]   CrashDetect plugin 4.21
+[18:36:57]   Loaded.
+[18:36:57]  Loading plugin: discord-connector
+[18:36:57]  >> plugin.dc-connector: v0.3.5 successfully loaded.
+[18:36:57]   Loaded.
+[18:36:57]  Loading plugin: mysql
+[18:36:58]  >> plugin.mysql: R41-4 successfully loaded.
+[18:36:58]   Loaded.
+[18:36:58]  Loading plugin: sscanf
+[18:36:58] 
+[18:36:58]  ===============================
+[18:36:58] 
+[18:36:58]       sscanf plugin loaded.     
+[18:36:58] 
+[18:36:58]          Version: 2.13.8
+[18:36:58] 
+[18:36:58]    (c) 2022 Alex "Y_Less" Cole  
+[18:36:58] 
+[18:36:58]  ===============================
+[18:36:58] 
+[18:36:58]   Loaded.
+[18:36:58]  Loading plugin: streamer
+[18:36:58] 
+
+*** Streamer Plugin v2.9.6 by Incognito loaded ***
+
+[18:36:58]   Loaded.
+[18:36:58]  Loaded 5 plugins.
+
+[18:36:58] 
+[18:36:58] Filterscripts
+[18:36:58] ---------------
+[18:36:58]   Loaded 0 filterscripts.
+
+[18:36:58]  
+[18:36:58]  
+[18:36:58]          ==============================================================
+[18:36:58]          |                                                            |
+[18:36:58]          |                                                            |
+[18:36:58]          |    YYYYYYY       YYYYYYY    SSSSSSSSSSSSSSS  IIIIIIIIII    |
+[18:36:58]          |    Y:::::Y       Y:::::Y  SS:::::::::::::::S I::::::::I    |
+[18:36:58]          |    Y:::::Y       Y:::::Y S:::::SSSSSS::::::S I::::::::I    |
+[18:36:58]          |    Y::::::Y     Y::::::Y S:::::S     SSSSSSS II::::::II    |
+[18:36:58]          |    YYY:::::Y   Y:::::YYY S:::::S               I::::I      |
+[18:36:58]          |       Y:::::Y Y:::::Y    S:::::S               I::::I      |
+[18:36:58]          |        Y:::::Y:::::Y      S::::SSSS            I::::I      |
+[18:36:58]          |         Y:::::::::Y        SS::::::SSSSS       I::::I      |
+[18:36:58]          |          Y:::::::Y           SSS::::::::SS     I::::I      |
+[18:36:58]          |           Y:::::Y               SSSSSS::::S    I::::I      |
+[18:36:58]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:36:58]          |           Y:::::Y                    S:::::S   I::::I      |
+[18:36:58]          |           Y:::::Y        SSSSSSS     S:::::S II::::::II    |
+[18:36:58]          |        YYYY:::::YYYY     S::::::SSSSSS:::::S I::::::::I    |
+[18:36:58]          |        Y:::::::::::Y     S:::::::::::::::SS  I::::::::I    |
+[18:36:58]          |        YYYYYYYYYYYYY      SSSSSSSSSSSSSSS    IIIIIIIIII    |
+[18:36:58]          |                                                            |
+[18:36:58]          |                                                            |
+[18:36:58]          |                      (c) 2021 MPL v1.1                     |
+[18:36:58]          |            Alex "Y_Less" Cole and contributors.            |
+[18:36:58]          |                                                            |
+[18:36:58]          |                                                            |
+[18:36:58]          ==============================================================
+[18:36:58]  
+[18:36:58]  
+[18:36:58]  ========================================== 
+[18:36:58]  |                                        | 
+[18:36:58]  |  Missing YSI scriptfiles directories:  | 
+[18:36:58]  |                                        | 
+[18:36:58]  |      /scriptfiles/YSI/fixes/           | 
+[18:36:58]  |      /scriptfiles/YSI/temp/            | 
+[18:36:58]  |                                        | 
+[18:36:58]  ========================================== 
+[18:36:58]  |                                        | 
+[18:36:58]  |   Generating code, this may take a     | 
+[18:36:58]  |  little bit of time.  Note that this   | 
+[18:36:58]  |  code generation works best with the   | 
+[18:36:58]  |     JIT plugin, which you are not      | 
+[18:36:58]  |     currently using.  Get it here:     | 
+[18:36:58]  |                                        | 
+[18:36:58]  |       https://git.io/jit-plugin        | 
+[18:36:58]  |                                        | 
+[18:36:58]  |             Please wait...             | 
+[18:36:58]  |                                        | 
+[18:36:58]  |             Done in 156ms!             | 
+[18:36:58]  |                                        | 
+[18:36:58]  ========================================== 
+[18:36:58]   Filterscript '../scriptfiles/callbackfix.amx' loaded.
+[18:36:58]  |                                        | 
+[18:36:58]  | Server:      0.3.7-R2 (W)              | 
+[18:36:58]  | Started:     29 Mar 2024 - 18:36:58    | 
+[18:36:58]  |                                        | 
+[18:36:58]  | Compiler:    3.10.10 (Windows)         | 
+[18:36:58]  | Includes:    0.3DL                     | 
+[18:36:58]  | Codepage:    <none>                    | 
+[18:36:58]  | Built:       29 Mar 2024 - 18:36:47    | 
+[18:36:58]  |                                        | 
+[18:36:58]  | YSI:         v05.09.0982               | 
+[18:36:58]  | Master:      -1                        | 
+[18:36:58]  |                                        | 
+[18:36:58]  | JIT:         <none>                    | 
+[18:36:58]  | Crashdetect: <found>                   | 
+[18:36:58]  |                                        | 
+[18:36:58]  ========================================== 
+[18:36:58]  
+[18:36:58] [debug] Long callback execution detected (hang or performance issue)
+[18:36:58] [debug] AMX backtrace:
+[18:36:58] [debug] #0 00005dcc in AMX_GetEntryPrefix (E_AMX_TABLE:table=0, idx=74, &buffer=@0179a3f0 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:1161
+[18:36:58] [debug] #1 00005f38 in AMX_GetPointerPrefix (E_AMX_TABLE:table=0, idx=0, &buffer=@0179a410 0, pattern=1598650688) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_amx_impl.inc:2016
+[18:36:58] [debug] #2 00009380 in ScriptInit_PreInitFuncs_ () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_core_entry.inc:558
+[18:36:58] [debug] #3 00002cfc in public cmd_dp () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1867
+[18:36:58]  
+[18:36:58] [MYSQL] Banco de dados conectado com sucesso!
+[18:36:58] [debug] Long callback execution detected (hang or performance issue)
+[18:36:58] [debug] AMX backtrace:
+[18:36:58] [debug] #0 0000c9b4 in Iter_CreateActor (modelid=293, Float:X=1636.46692, Float:Y=-1366.13867, Float:Z=331.40631, Float:Rotation=85.87240) at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\y_foreach_iterators.inc:915
+[18:36:58] [debug] #1 0004c3a0 in _@yHOnGameModeInit@0G () at ../modules/maps/objects/index.pwn:12
+[18:36:58] [debug] #2 0001ccb4 in public OnScriptInit@E () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Coding\y_hooks\..\y_cgen\y_cgen_impl.inc:157
+[18:36:58] [debug] #3 native CallLocalFunction () in samp-server.exe
+[18:36:58] [debug] #4 00002dd0 in public cmd_dp () at C:\Users\julio\Downloads\arquivos\@Fiftygroup\Five-Fugas\pawno\include\YSI_Data\y_foreach\..\..\YSI_Core\y_core\y_scriptinit_impl.inc:1900
+[18:36:58] ===========================================================
+
+[18:36:58] -----------------------( Running )-------------------------
+
+[18:36:58] ===========================================================
+
+[18:36:58] Number of vehicle models: 0
+[18:38:56] [connection] incoming connection: 127.0.0.1:53082 id: 0
+[18:38:56] [join] Julio_Developer has joined the server (0:127.0.0.1)
+[18:39:03] [part] Julio_Developer has left the server (0:1)
+[18:40:20] [debug] Server received interrupt signal
+[18:40:20] [debug] Native backtrace:
+[18:40:20] [debug] #0 774a2edc in ?? () in C:\Windows\SYSTEM32\ntdll.dll
+[18:40:20] [debug] #1 769e914f in ?? () in C:\Windows\System32\KERNELBASE.dll
+[18:40:20] [debug] #2 0048d53c in ?? () in samp-server.exe
+[18:40:20] [debug] #3 0049b531 in ?? () in samp-server.exe
+[18:40:20] [debug] #4 0049b541 in ?? () in samp-server.exe
+[18:40:20] --- Server Shutting Down.
+[18:40:20] plugin.dc-connector: Unloading plugin...
+[18:40:21] plugin.dc-connector: Plugin unloaded.
+[18:40:21] plugin.mysql: Unloading plugin...
+[18:40:21] plugin.mysql: Plugin unloaded.
+[18:40:21] 
+[18:40:21]  ===============================
+[18:40:21] 
+[18:40:21]      sscanf plugin unloaded.    
+[18:40:21] 
+[18:40:21]  ===============================
+[18:40:21] 
+[18:40:21] 
+
+*** Streamer Plugin v2.9.6 by Incognito unloaded ***
+

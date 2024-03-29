@@ -1,130 +1,285 @@
 #include <YSI_Coding/y_hooks>
 
+new PlayerText:VisualLogin[MAX_PLAYERS][18];
 
-stock CarregarTextdrawPlayer(playerid)
+stock LoadLoginTextDraw(playerid)
 {
-    TextdrawRegistro[0][playerid] = CreatePlayerTextDraw(playerid, 402.000000, 119.000000, "_");
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[0][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[0][playerid], 1);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[0][playerid], 2.679999, 21.999996);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[0][playerid], -1);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[0][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[0][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[0][playerid], 1);
-    PlayerTextDrawUseBox(playerid, TextdrawRegistro[0][playerid], 1);
-    PlayerTextDrawBoxColor(playerid, TextdrawRegistro[0][playerid], 471604479);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[0][playerid], 236.000000, 189.000000);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[0][playerid], 0);
+	if (!IsPlayerConnected(playerid))
+		return false;
+		
+	VisualLogin[playerid][0] = CreatePlayerTextDraw(playerid, 92.000000, -4.000000, "_");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][0], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][0], 0.600000, 50.450004);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][0], 333.500000, 187.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][0], 1);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][0], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][0], 2);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][0], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][0], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][0], 255);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][0], 1);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][0], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][0], 0);
 
-    TextdrawRegistro[1][playerid] = CreatePlayerTextDraw(playerid, 382.000000, 172.000000, "_");
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[1][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[1][playerid], 1);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[1][playerid], 0.480000, 1.800000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[1][playerid], -1);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[1][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[1][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[1][playerid], 1);
-    PlayerTextDrawUseBox(playerid, TextdrawRegistro[1][playerid], 1);
-    PlayerTextDrawBoxColor(playerid, TextdrawRegistro[1][playerid], -1061109590);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[1][playerid], 255.000000, -247.000000);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[1][playerid], 0);
+	VisualLogin[playerid][1] = CreatePlayerTextDraw(playerid, 24.000000, 87.000000, "Bem-vindo,");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][1], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][1], 0.220833, 1.600000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][1], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][1], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][1], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][1], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][1], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][1], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][1], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][1], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][1], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][1], 0);
 
-    TextdrawRegistro[2][playerid] = CreatePlayerTextDraw(playerid, 307.000000, 146.000000, "hud:ball");
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[2][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[2][playerid], 4);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[2][playerid], 0.500000, 1.000000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[2][playerid], -1061109590);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[2][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[2][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[2][playerid], 1);
-    PlayerTextDrawUseBox(playerid, TextdrawRegistro[2][playerid], 1);
-    PlayerTextDrawBoxColor(playerid, TextdrawRegistro[2][playerid], -1061109590);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[2][playerid], 18.000000, -19.000000);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[2][playerid], 0);
+	VisualLogin[playerid][2] = CreatePlayerTextDraw(playerid, 24.000000, 100.000000, "Nome_Sobrenome");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][2], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][2], 0.212500, 1.700000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][2], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][2], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][2], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][2], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][2], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][2], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][2], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][2], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][2], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][2], 0);
 
-    TextdrawRegistro[3][playerid] = CreatePlayerTextDraw(playerid, 305.000000, 159.000000, "hud:ball");
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[3][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[3][playerid], 4);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[3][playerid], 0.500000, 1.000000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[3][playerid], -1061109590);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[3][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[3][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[3][playerid], 1);
-    PlayerTextDrawUseBox(playerid, TextdrawRegistro[3][playerid], 1);
-    PlayerTextDrawBoxColor(playerid, TextdrawRegistro[3][playerid], -1061109590);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[3][playerid], 22.000000, -11.000000);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[3][playerid], 0);
+	VisualLogin[playerid][3] = CreatePlayerTextDraw(playerid, 22.000000, 150.000000, "CONTAS REGISTRADAS");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][3], 2);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][3], 0.120833, 0.899999);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][3], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][3], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][3], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][3], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][3], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][3], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][3], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][3], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][3], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][3], 0);
 
-    TextdrawRegistro[4][playerid] = CreatePlayerTextDraw(playerid, 382.000000, 205.000000, "_");
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[4][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[4][playerid], 1);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[4][playerid], 0.480000, 1.800000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[4][playerid], -1);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[4][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[4][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[4][playerid], 1);
-    PlayerTextDrawUseBox(playerid, TextdrawRegistro[4][playerid], 1);
-    PlayerTextDrawBoxColor(playerid, TextdrawRegistro[4][playerid], -1061109590);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[4][playerid], 255.000000, -247.000000);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[4][playerid], 0);
+	VisualLogin[playerid][4] = CreatePlayerTextDraw(playerid, 22.000000, 159.000000, "950");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][4], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][4], 0.262499, 1.299998);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][4], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][4], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][4], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][4], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][4], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][4], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][4], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][4], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][4], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][4], 0);
 
-    TextdrawRegistro[5][playerid] = CreatePlayerTextDraw(playerid, 353.000000, 251.000000, "_");
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[5][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[5][playerid], 1);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[5][playerid], 0.529999, 2.299999);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[5][playerid], -1);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[5][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[5][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[5][playerid], 1);
-    PlayerTextDrawUseBox(playerid, TextdrawRegistro[5][playerid], 1);
-    PlayerTextDrawBoxColor(playerid, TextdrawRegistro[5][playerid], COR_ROXOCLARO);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[5][playerid], 284.000000, -252.000000);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[5][playerid], 0);
+	VisualLogin[playerid][5] = CreatePlayerTextDraw(playerid, 89.000000, 150.000000, "PERSONAGENS CRIADOS");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][5], 2);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][5], 0.120833, 0.899999);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][5], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][5], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][5], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][5], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][5], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][5], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][5], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][5], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][5], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][5], 0);
 
-    TextdrawRegistro[6][playerid] = CreatePlayerTextDraw(playerid, 316.000000, 174.000000, "Nome_Sobrenome");
-    PlayerTextDrawAlignment(playerid, TextdrawRegistro[6][playerid], 2);
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[6][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[6][playerid], 2);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[6][playerid], 0.190000, 1.200000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[6][playerid], COR_BRANCO);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[6][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[6][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[6][playerid], 1);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[6][playerid], 0);
+	VisualLogin[playerid][6] = CreatePlayerTextDraw(playerid, 88.000000, 159.000000, "4899");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][6], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][6], 0.258332, 1.299998);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][6], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][6], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][6], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][6], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][6], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][6], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][6], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][6], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][6], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][6], 0);
 
-    TextdrawRegistro[7][playerid] = CreatePlayerTextDraw(playerid, 317.000000, 207.000000, "Senha");
-    PlayerTextDrawAlignment(playerid, TextdrawRegistro[7][playerid], 2);
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[7][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[7][playerid], 2);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[7][playerid], 0.190000, 1.200000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[7][playerid], COR_BRANCO);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[7][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[7][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[7][playerid], 1);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[7][playerid], 1);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[7][playerid], 30.0, 30.0);
+	VisualLogin[playerid][7] = CreatePlayerTextDraw(playerid, 22.000000, 199.000000, "LOGINS HOJE");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][7] , 2);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][7] , 0.120833, 0.899999);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][7] , 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][7] , 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][7] , 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][7] , 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][7] , 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][7] , 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][7] , 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][7] , 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][7] , 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][7] , 0);
 
-    TextdrawRegistro[8][playerid] = CreatePlayerTextDraw(playerid, 318.000000, 255.000000, "Entrar");
-    PlayerTextDrawAlignment(playerid, TextdrawRegistro[8][playerid], 2);
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[8][playerid], 010101);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[8][playerid], 2);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[8][playerid], 0.190000, 1.200000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[8][playerid], -1);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[8][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[8][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[8][playerid], 1);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[8][playerid], 1);
-    PlayerTextDrawTextSize(playerid, TextdrawRegistro[8][playerid], 30.0, 30.0);
+	VisualLogin[playerid][8] = CreatePlayerTextDraw(playerid, 22.000000, 208.000000, "100");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][8] , 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][8] , 0.262499, 1.350000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][8] , 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][8] , 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][8] , 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][8] , 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][8] , -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][8] , 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][8] , 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][8] , 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][8] , 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][8] , 0);
 
-    TextdrawRegistro[9][playerid] = CreatePlayerTextDraw(playerid, 317.000000, 326.000000, "_"); // erro
-    PlayerTextDrawAlignment(playerid, TextdrawRegistro[9][playerid], 2);
-    PlayerTextDrawBackgroundColor(playerid, TextdrawRegistro[9][playerid], 255);
-    PlayerTextDrawFont(playerid, TextdrawRegistro[9][playerid], 1);
-    PlayerTextDrawLetterSize(playerid, TextdrawRegistro[9][playerid], 0.250000, 1.300000);
-    PlayerTextDrawColor(playerid, TextdrawRegistro[9][playerid], -1);
-    PlayerTextDrawSetOutline(playerid, TextdrawRegistro[9][playerid], 0);
-    PlayerTextDrawSetProportional(playerid, TextdrawRegistro[9][playerid], 1);
-    PlayerTextDrawSetShadow(playerid, TextdrawRegistro[9][playerid], 1);
-    PlayerTextDrawSetSelectable(playerid, TextdrawRegistro[9][playerid], 0);
-    return 1;
+	VisualLogin[playerid][9] = CreatePlayerTextDraw(playerid, 89.000000, 199.000000, "PLAYERS ONLINE");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][9] , 2);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][9] , 0.120833, 0.899999);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][9] , 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][9] , 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][9] , 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][9] , 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][9] , 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][9] , 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][9] , 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][9] , 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][9] , 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][9] , 0);
+
+	VisualLogin[playerid][10] = CreatePlayerTextDraw(playerid, 88.000000, 208.000000, "50");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][10] , 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][10] , 0.262499, 1.350000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][10] , 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][10] , 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][10] , 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][10] , 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][10] , -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][10] , 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][10] , 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][10] , 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][10] , 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][10] , 0);
+
+	VisualLogin[playerid][11] = CreatePlayerTextDraw(playerid, 88.000000, 254.000000, "_");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][11], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][11] , 0.600000, -0.249990);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][11] , 315.000000, 127.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][11] , 1);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][11] , 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][11] , 2);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][11], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][11] , 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][11], 1296911871);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][11], 1);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][11], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][11], 0);
+
+	VisualLogin[playerid][12] = CreatePlayerTextDraw(playerid, 23.000000, 264.000000, "Seja bem-vindo ao Underground Roleplay, Clique");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][12], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][12], 0.162496, 0.800000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][12], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][12], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][12], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][12], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][12], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][12], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][12], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][12], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][12], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][12], 0);
+
+	VisualLogin[playerid][13] = CreatePlayerTextDraw(playerid, 25.000000, 272.000000, "no botao abaixo para selecionar um personagem:");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][13], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][13], 0.154164, 0.850000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][13], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][13], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][13], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][13], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][13], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][13], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][13], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][13], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][13], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][13], 0);
+
+	VisualLogin[playerid][14] = CreatePlayerTextDraw(playerid, 91.000000, 303.000000, "_");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][14], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][14], 0.600000, 2.550002);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][14], 292.500000, 132.500000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][14], 1);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][14], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][14], 2);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][14], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][14], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][14], 1097458175);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][14], 1);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][14], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][14], 0);
+
+	VisualLogin[playerid][15] = CreatePlayerTextDraw(playerid, 66.000000, 308.000000, "ENTRAR >");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][15], 2);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][15], 0.224996, 1.350000);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][15], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][15], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][15], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][15], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][15], -1);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][15], -16776961);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][15], -1962934222);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][15], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][15], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][15], 1);
+
+	VisualLogin[playerid][16] = CreatePlayerTextDraw(playerid, 110.000000, 336.000000, "RECUPERAR CONTA");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][16], 1);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][16], 0.158328, 0.899999);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][16], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][16], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][16], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][16], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][16], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][16], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][16], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][16], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][16], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][16], 1);
+
+	VisualLogin[playerid][17] = CreatePlayerTextDraw(playerid, 8.000000, 432.000000, "SERVIDOR 1");
+	PlayerTextDrawFont(playerid, VisualLogin[playerid][17], 2);
+	PlayerTextDrawLetterSize(playerid, VisualLogin[playerid][17], 0.149995, 1.049998);
+	PlayerTextDrawTextSize(playerid, VisualLogin[playerid][17], 400.000000, 17.000000);
+	PlayerTextDrawSetOutline(playerid, VisualLogin[playerid][17], 0);
+	PlayerTextDrawSetShadow(playerid, VisualLogin[playerid][17], 0);
+	PlayerTextDrawAlignment(playerid, VisualLogin[playerid][17], 1);
+	PlayerTextDrawColor(playerid, VisualLogin[playerid][17], 1296911871);
+	PlayerTextDrawBackgroundColor(playerid, VisualLogin[playerid][17], 255);
+	PlayerTextDrawBoxColor(playerid, VisualLogin[playerid][17], 50);
+	PlayerTextDrawUseBox(playerid, VisualLogin[playerid][17], 0);
+	PlayerTextDrawSetProportional(playerid, VisualLogin[playerid][17], 1);
+	PlayerTextDrawSetSelectable(playerid, VisualLogin[playerid][17], 0);
+	
+	for (new i = 0; i < sizeof VisualLogin[]; i++)
+  {
+		if (VisualLogin[playerid][i] == PlayerText:INVALID_TEXT_DRAW)
+			continue;
+        
+        PlayerTextDrawShow(playerid, VisualLogin[playerid][i]);
+	}
+	// TogglePlayerSpectating(playerid, true);
+	PlayerTextDrawSetString(playerid, VisualLogin[playerid][2], PlayerName(playerid));
+	return true;
+}
+
+stock UnloadLoginTextDraw(playerid)
+{
+	for (new i = 0; i < sizeof VisualLogin[]; i++)
+  {
+		if (VisualLogin[playerid][i] == PlayerText:INVALID_TEXT_DRAW)
+			continue;
+        
+        PlayerTextDrawDestroy(playerid, VisualLogin[playerid][i]);
+	}
+	// TogglePlayerSpectating(playerid, false);
+	return true;
 }

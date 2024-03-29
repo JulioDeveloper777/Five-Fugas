@@ -1,0 +1,38 @@
+echo Executing Server Config...
+lanmode 0
+rcon_password 085
+maxplayers 100
+port 7777
+hostname Five Fugas
+gamemode0 five
+plugins crashdetect discord-connector mysql sscanf streamer
+filterscripts
+announce 1
+chatlogging 0
+weburl www.sa-mp.com
+onfoot_rate 40
+incar_rate 40
+weapon_rate 40
+stream_distance 300.0
+stream_rate 1000
+maxnpc 0
+logtimeformat [%H:%M:%S]
+language PT - BR
+query 1
+discord_bot_token MTA3NDQ4NjIwNzg3NjE4MjE1Nw.GaPBcz.0w5cTS9_63CgIN-CsaMncl-nzVLuHvj9Z-W0BA
+rcon 0
+logqueries 0
+sleep 5
+timestamp 1
+messageholelimit 3000
+messageslimit 500
+ackslimit 3000
+playertimeout 10000
+minconnectiontime 0
+lagcompmode 1
+connseedtime 300000
+db_logging 0
+db_log_queries 0
+conncookies 1
+cookielogging 0
+output 1

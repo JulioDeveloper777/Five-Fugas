@@ -1,47 +1,34 @@
 #include <YSI_Coding/y_hooks>
 
 
-CMD:developer(playerid)
-{
-    if (!DOF2_FileExists(arquivo))
-    {
-        DOF2_CreateFile(arquivo); // caso o nome dele nao esteja na pasta administradores.
-    }
-    if (info[playerid][Admin] > 5) return Scm(playerid, -1, "");
-
-    DOF2_SetInt(arquivo, "Admin", 10); // irá setar na linha Admin o valor do nível desejado.
-    DOF2_SaveFile(); // salva e fecha o arquivo.
-    info[playerid][Admin] = 10;
-    Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Correct!");
-    return 1;
-}
 CMD:comandosadm(playerid, params[])
 {
-    new Str[1000];
-    if (info[playerid][Admin] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+  // if (info[playerid][pAdmin] < 1)
+  new Str[1000];
+  if (!Admin_Permission(playerid, 10)) 
+  {
+    if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
-        if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
-        {
-            strcat(Str, "{FFFFFF}/trabalhar, /clear, /sethora, /setclima, /dv, /car, /setmoney \n");
-            strcat(Str, "{FFFFFF}/setskin, /aviso, /trazer, /tvoff, /tv, /ir, /setvida, /pintar  \n");
-            strcat(Str, "{FFFFFF}/setarma, /daradmin, /fix, /trabalhar, /esc, /virar\n");
-            strcat(Str, "{FFFFFF}                                TELEPORTES                               \n");
-            strcat(Str, "{FFFFFF}/lobby     |   /favela   |  /dp     |    /ls    | /sf | /lv  | /cachoeira\n");
-            ShowPlayerDialog(playerid, D_ADMINISTRADOR, DIALOG_STYLE_MSGBOX, "Comandos Admin - Five Fugas", Str, "-", "");
-        }
+      strcat(Str, "{FFFFFF}/trabalhar, /clear, /sethora, /setclima, /dv, /car, /setmoney \n");
+      strcat(Str, "{FFFFFF}/setskin, /trazer, /tvoff, /tv, /ir, /setvida, /pintar  \n");
+      strcat(Str, "{FFFFFF}/setarma, /daradmin, /fix, /trabalhar, /esc, /virar\n");
+      strcat(Str, "{FFFFFF}                                TELEPORTES                               \n");
+      strcat(Str, "{FFFFFF}/lobby     |   /favela   |  /dp     |    /ls    | /sf | /lv \n");
+      ShowPlayerDialog(playerid, D_ADMINISTRADOR, DIALOG_STYLE_MSGBOX, "Comandos pAdmin - Five Fugas", Str, "-", "");
     }
-    return 1;
+  }
+  return 1;
 }
 
 CMD:setmoney(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
             new id, valor;
             if (sscanf(params, "ud", id, valor))
-                return SendClientMessage(playerid, 0xBFC0C2FF, "{9900FF}[Five] {FFFFFF}* Use: /setmoney [ID] [Valor]");
+                return SendClientMessage(playerid, -1, "{9900FF}[Five] {FFFFFF}* Use: /setmoney [ID] [Valor]");
             GivePlayerMoney(id, valor);
         }
     }
@@ -50,7 +37,7 @@ CMD:setmoney(playerid, params[])
 
 CMD:pintar(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -65,7 +52,7 @@ CMD:pintar(playerid, params[])
 
 CMD:virar(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -84,14 +71,14 @@ CMD:virar(playerid, params[])
 
 CMD:setvida(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
             new id, vida, string[100], str[100];
             if (sscanf(params, "ii", id, vida)) return SendClientMessage(playerid, COR_AMARELO, "Use: /setvida [id] [vida]");
             format(string, 100, "{9900FF}[Five] {FFFFFF}Voce setou %d de vida no ID: %d", vida, id);
-            format(str, 100, "{9900FF}[Five] {FFFFFF}Voce recebeu %d de vida do Admin", vida);
+            format(str, 100, "{9900FF}[Five] {FFFFFF}Voce recebeu %d de vida do pAdmin", vida);
             SetPlayerHealth(id, vida);
             SendClientMessage(playerid, COR_AMARELO, string);
             SendClientMessage(id, COR_AMARELO, str);
@@ -100,59 +87,56 @@ CMD:setvida(playerid, params[])
     return 1;
 }
 
-CMD:daradmin(playerid, params[])
-{
-    new id, adm, funcao[999], str[999];
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
-    {
-        if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
-        {
-            if (sscanf(params, "dds", id, adm, funcao)) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /admin0 [ID] [NIVEL] [FUNCAO].");
-            format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}Voce deu administrador {9900FF}%d{FFFFFF} Funcao {9900FF}%s{FFFFFF} Para {FFFFFF}{F0E68C}%s(%d){FFFFFF}{FFFFFF}.", adm, funcao, PlayerName(id), id);
-            Scm(playerid, -1, str);
-            format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}O Administrador {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} te deu admin nivel {9900FF}%d{FFFFFF} Funcao {9900FF}%s{FFFFFF}.", PlayerName(playerid), playerid, adm, funcao);
-            Scm(id, -1, str);
-            format(arquivo, sizeof(arquivo), PASTA_CONTAS, PlayerName(id));
-            if (DOF2_FileExists(arquivo))
-            {
-                info[id][Admin] = adm;
-                DOF2_SetInt(arquivo, "Admin", adm);
-                DOF2_SetString(arquivo, "Funcao", funcao);
-                DOF2_SaveFile();
-            }
-        }
-    }
-    return 1;
-}
+// CMD:daradmin(playerid, params[])
+// {
+//   new Query[125];
+//   new id, adm, funcao[999], str[999];
+//   if (!Admin_Permission(playerid, 10)) 
+//   {
+//     if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
+//     {
+//       if (sscanf(params, "dds", id, adm, funcao)) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /admin0 [ID] [NIVEL] [FUNCAO].");
+//       format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}Voce deu administrador {9900FF}%d{FFFFFF} Funcao {9900FF}%s{FFFFFF} Para {FFFFFF}{F0E68C}%s(%d){FFFFFF}{FFFFFF}.", adm, funcao, PlayerName(id), id);
+//       Scm(playerid, -1, str);
+//       format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}O Administrador {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} te deu pAdmin nivel {9900FF}%d{FFFFFF} Funcao {9900FF}%s{FFFFFF}.", PlayerName(playerid), playerid, adm, funcao);
+//       Scm(id, -1, str);
+      
+//       mysql_format(ConexaoMySQL, Query, sizeof(Query), "UPDATE `Player` SET \
+//       `pAdmin`='%i'", PlayerData[playerid][pAdmin]);
+//       mysql_query(ConexaoMySQL, Query);
+//     }
+//   }
+//   return 1;
+// }
 CMD:clear(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+  if (!Admin_Permission(playerid, 10)) 
+  {
+    if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
-        if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
-        {
-            LimparChat(playerid, 30);
-        }
+      ClearChatAll(30);
     }
-    return 1;
+  }
+  return 1;
 }
 CMD:sethora(playerid, params[])
 {
-    new hora;
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+  new hora;
+  if (!Admin_Permission(playerid, 10)) 
+  {
+    if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
     {
-        if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
-        {
-            if (sscanf(params, "d", hora)) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /sethora [HORA].");
-            SetWorldTime(hora);
-        }
+        if (sscanf(params, "d", hora)) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /sethora [HORA].");
+        SetWorldTime(hora);
     }
-    return 1;
+  }
+  return 1;
 }
 
 CMD:setclima(playerid, params[])
 {
     new clima;
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -165,7 +149,7 @@ CMD:setclima(playerid, params[])
 
 CMD:car(playerid, const params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -188,7 +172,7 @@ CMD:car(playerid, const params[])
 CMD:trabalhar(playerid, params[])
 {
     new str[999];
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] > 0)
         {
@@ -196,7 +180,7 @@ CMD:trabalhar(playerid, params[])
             SetPlayerHealth(playerid, 100);
             SetPlayerArmour(playerid, 0);
             SendClientMessageToAll(-1, "{9900FF}|_______________ {FFFFFF}Aviso da Administracao{9900FF} _______________|");
-            format(str, sizeof(str), "{FFFFFF}O Admin {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} Esta Jogando.", PlayerName(playerid), playerid);
+            format(str, sizeof(str), "{FFFFFF}O pAdmin {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} Esta Jogando.", PlayerName(playerid), playerid);
             SendClientMessageToAll(-1, str);
         }
         else
@@ -205,40 +189,37 @@ CMD:trabalhar(playerid, params[])
             SetPlayerHealth(playerid, 99999);
             SetPlayerArmour(playerid, 99999);
             SendClientMessageToAll(-1, "{9900FF}|_______________ {FFFFFF}Aviso da Administracao{9900FF} _______________|");
-            format(str, sizeof(str), "{FFFFFF}O Admin {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} Esta Trabalhando.", PlayerName(playerid), playerid);
+            format(str, sizeof(str), "{FFFFFF}O pAdmin {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} Esta Trabalhando.", PlayerName(playerid), playerid);
             SendClientMessageToAll(-1, str);
         }
     }
     return 1;
 }
-CMD:setskin(playerid, params[])
-{
-    new ID, SKIN, str[999];
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
-    {
-        if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
-        {
-            if (sscanf(params, "dd", ID, SKIN)) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /setskin [ID] [SKIN]");
-            {
-                format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}Voce deu skin {FFFFFF}%d{FFFFFF} Para {9900FF}%s(%d){FFFFFF}.", SKIN, PlayerName(ID), ID);
-                Scm(playerid, -1, str);
-                format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}O Administrador {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} te deu Skin {9900FF}%d{FFFFFF}.", PlayerName(playerid), playerid, SKIN);
-                Scm(ID, -1, str);
-                format(arquivo, sizeof(arquivo), PASTA_CONTAS, PlayerName(ID));
-                if (DOF2_FileExists(arquivo))
-                {
-                    SetPlayerSkin(ID, SKIN);
-                    DOF2_SetInt(arquivo, "Skin", SKIN);
-                    DOF2_SaveFile();
-                }
-            }
-        }
-    }
-    return 1;
-}
+// CMD:setskin(playerid, params[])
+// {
+//   new ID, SKIN, str[999];
+//   if (!Admin_Permission(playerid, 10)) 
+//   {
+//     if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
+//     {
+//       if (sscanf(params, "dd", ID, SKIN)) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /setskin [ID] [SKIN]");
+//       {
+//         format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}Voce deu skin {FFFFFF}%d{FFFFFF} Para {9900FF}%s(%d){FFFFFF}.", SKIN, PlayerName(ID), ID);
+//         Scm(playerid, -1, str);
+//         format(str, sizeof(str), "{9900FF}[Five] {FFFFFF}O Administrador {FFFFFF}{9900FF}%s(%d){FFFFFF}{FFFFFF} te deu Skin {9900FF}%d{FFFFFF}.", PlayerName(playerid), playerid, SKIN);
+//         Scm(ID, -1, str);
+        
+//         mysql_format(ConexaoMySQL, Query, sizeof(Query), "UPDATE `Player` SET \
+//         `Skin`='%i'", PlayerData[playerid][pAdmin]);
+//         mysql_query(ConexaoMySQL, Query);
+//       }
+//     }
+//   }
+//   return 1;
+// }
 CMD:dv(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -249,7 +230,7 @@ CMD:dv(playerid, params[])
 }
 CMD:fix(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -259,39 +240,10 @@ CMD:fix(playerid, params[])
     return 1;
 }
 
-CMD:aviso(playerid, params[]) {
-    new aviso[100], string[500];
-    if(info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
-    {
-        if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
-        {
-            if(sscanf(params, "s", aviso)) return SendClientMessage(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /aviso [TEXTO]");
-            {
-                SendClientMessageToAll(-1, "{9900FF}|_______________ {FFFFFF}Aviso da Administracao{9900FF} _______________|");
-                format(string, 500, "{FFFFFF}Admin {9900FF}%s(%d){FFFFFF}{FFFFFF}: %s!", PlayerName(playerid), playerid, aviso);
-                SendClientMessageToAll(-1, string);
-            }
-        }
-    }
-    return 1;
-}
-
-CMD:av(playerid, params[]){
-    new msg, str[500];
-    if(sscanf(params, "s", msg)){
-        return SendClientMessage(playerid, -1, "Use /av [mensagem]");
-    }
-    else{
-        format(str, sizeof(str), "{FF00FF}| AVISO | %s[%d] diz: {FFFF00}%s", PlayerName(playerid), playerid, msg);
-        SendClientMessageToAll(-1, str);
-    }
-    return 1;
-}
-
 CMD:tv(playerid, params[])
 {
     new id;
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     if (EstaTv[playerid] == 0)
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
@@ -314,7 +266,7 @@ CMD:tv(playerid, params[])
 }
 CMD:tvoff(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     if (EstaTv[playerid] == 1)
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
@@ -334,7 +286,7 @@ CMD:tvoff(playerid, params[])
 CMD:ir(playerid, params[])
 {
     new id, Float:PedPos[3], string[999];
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -351,7 +303,7 @@ CMD:ir(playerid, params[])
 CMD:trazer(playerid, params[])
 {
     new id, Float:PedPos[3], string[999];
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -368,7 +320,7 @@ CMD:trazer(playerid, params[])
 
 CMD:setarma(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -386,11 +338,11 @@ CMD:setarma(playerid, params[])
 
 // CMD:esc(playerid, params[])
 // {
-//     if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+//     if (!Admin_Permission(playerid, 10)) 
 //     {
 //         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
 //         {
-//             ShowPlayerDialog(playerid, DIALOG_ESCOLHER_LADO, DIALOG_STYLE_LIST, "(ADMIN) Escolha sua ORG/CORP", "{63AFF0}Policial - {FFFFFF}Funcao Prender os Procurados\n{FB0000}Bandido - {FFFFFF}Funcao Roubar Caixas e Lojas\n", "Escolher", "Fechar");
+//             ShowPlayerDialog(playerid, DIALOG_ESCOLHER_LADO, DIALOG_STYLE_LIST, "(pAdmin) Escolha sua ORG/CORP", "{63AFF0}Policial - {FFFFFF}Funcao Prender os Procurados\n{FB0000}Bandido - {FFFFFF}Funcao Roubar Caixas e Lojas\n", "Escolher", "Fechar");
 //         }
 //     }
 //     return true;
@@ -399,7 +351,7 @@ CMD:setarma(playerid, params[])
 //TELEPORTES
 CMD:ls(playerid)
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -413,7 +365,7 @@ CMD:ls(playerid)
 }
 CMD:lv(playerid)
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -427,7 +379,7 @@ CMD:lv(playerid)
 }
 CMD:sf(playerid)
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -443,7 +395,7 @@ CMD:sf(playerid)
 
 CMD:favela(playerid)
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -458,7 +410,7 @@ CMD:favela(playerid)
 
 CMD:dp(playerid)
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -473,7 +425,7 @@ CMD:dp(playerid)
 
 CMD:lobby(playerid)
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
@@ -486,17 +438,18 @@ CMD:lobby(playerid)
     return 1;
 }
 
-CMD:cachoeira(playerid)
+
+CMD:aviso(playerid, params[])
 {
-    if (info[playerid][Admin] < 10) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao tem permissao.");
+    if (!Admin_Permission(playerid, 10)) 
     {
         if (Trabalhando[playerid] < 1) return Scm(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce nao esta em modo trabalho.");
         {
-            SetPlayerPos(playerid, 3115.7041, -352.2107, 7.9271);
-            SendClientMessage(playerid, -1, "{9900FF}[Five] {FFFFFF}Voce foi teleportado para a cachoeira!");
-            SetPlayerInterior(playerid, 0);
-            SetPlayerVirtualWorld(playerid, 0);
+            new Str[128];
+            if(isnull(params)) return SendClientMessage(playerid, -1, "{9900FF}[Five] {FFFFFF}Use: /aviso [texto]");
+            format(Str, sizeof(Str), "{00FF00}[ANUNCIO]: %s, [%s], [%d]", params, PlayerName(playerid), playerid);
+            SendClientMessageToAll(-1, Str);
         }
     }
-    return 1;
+    return true;
 }

@@ -2,9 +2,13 @@
 [ RESOLVER ]
 anims
 ligarv por bind (2)
-farolv por bind (CTRL)
+farolv por bind (CTRL) de outra gm
+banco de dados
+tela login
 
 
+
+[ FEITO ]
 mapa conce ao lado de vinewood
 teleporte por mapa
 sair/entrar apertando F
@@ -12,6 +16,24 @@ novo lobby
 /car de admin por nome ou id 
 /virar
 /pintar
-banco de dados trocado
 modularização feita
 
+/clear resolvido
+removido /cachoeira
+
+
+Admin_Permission(playerid, level)
+{
+	if (Player[playerid][pAdmin] < level)
+	{
+		ShowPlayerNotification(playerid, 0xFF5555FF, 5000, -1, "ERRO", "Voc� n�o possui permiss�o para usar este comando.");
+		return false;
+	}
+
+	return true;
+}
+
+
+- conferir validação "daradmin" 
+- conferir validação "setskin" 
+- corrigir salvamento de vida e colete ( account > index )
