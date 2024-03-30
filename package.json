@@ -1,0 +1,11 @@
+{
+  "name": "five-fugas",
+  "version": "1.0.0",
+  "main": "gamemodes/five.pwn",
+  "scripts": {
+    "dev": "samp-server"
+  },
+  "repository": "https://github.com/JulioDeveloper777/Five-Fugas.git",
+  "author": "Julio Developer",
+  "license": "MIT"
+}

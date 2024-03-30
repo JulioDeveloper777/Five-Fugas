@@ -1,0 +1,2 @@
+[14:08:42] [plugins/mysql] error #1054 while executing query "SELECT `player_discord_id`,`player_discord_code`,`player_name`,`player_skin`,`player_admin` FROM `players` WHERE `player_id`='1' LIMIT 1": Unknown column 'player_discord_code' in 'field list' (../modules/server/account/index.pwn:287 -> ../modules/server/account/index.pwn:108)
+[03/30/24 14:10:00] [plugins/discord-connector] Can't write to Discord websocket gateway: A operação de E/S foi anulada devido a uma saída de thread ou a uma requisição de aplicativo (995)

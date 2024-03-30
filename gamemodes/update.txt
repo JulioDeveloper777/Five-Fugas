@@ -2,9 +2,13 @@
 [ RESOLVER ]
 anims
 ligarv por bind (2)
-farolv por bind (CTRL)
+farolv por bind (CTRL) de outra gm
+banco de dados
+tela login
 
 
+
+[ FEITO ]
 mapa conce ao lado de vinewood
 teleporte por mapa
 sair/entrar apertando F
@@ -12,6 +16,13 @@ novo lobby
 /car de admin por nome ou id 
 /virar
 /pintar
-banco de dados trocado
 modularização feita
+troca de database
+/clear consertado
+removido /cachoeira
 
+
+- conferir validação "setskin" 
+- corrigir Specting ao logar
+- corrigir /daradmin
+- ativar ant cheat
