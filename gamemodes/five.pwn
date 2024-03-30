@@ -2,15 +2,13 @@
 #define YSI_YES_HEAP_MALLOC
 
 //___________PRAGMAS________________//
-#pragma warning disable 214
-#pragma warning disable 239
+// #pragma warning disable 214
+// #pragma warning disable 239
 
 //___________INCLUDES________________//
-
-
 #include <a_samp>
 #include <a_mysql>
-// #include <YSI_Coding/y_timers>
+#include <YSI_Coding/y_timers>
 #include <YSI_Data/y_iterate>
 #include <YSI_Coding/y_hooks>
 #include <zcmd>
@@ -39,6 +37,7 @@
 #include "../modules/visual/login.pwn"
 
 /* Server */
+#include "../modules/server/account/dialogs.pwn"
 #include "../modules/server/account/player-data.pwn"
 #include "../modules/server/account/index.pwn"
 
@@ -65,10 +64,8 @@
 /* Maps */
 #include "../modules/maps/objects/index.pwn"
 #include "../modules/maps/exteriors/airport.pwn"
-#include "../modules/maps/exteriors/eletronics.pwn"
 #include "../modules/maps/exteriors/gangster.pwn"
 #include "../modules/maps/exteriors/gasstation.pwn"
-#include "../modules/maps/exteriors/hospital.pwn"
 #include "../modules/maps/exteriors/lobby.pwn"
 #include "../modules/maps/exteriors/lspd.pwn"
 #include "../modules/maps/interiors/lspd.pwn"

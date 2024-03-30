@@ -27,7 +27,7 @@ new EstaTv[MAX_PLAYERS];
 #define new_strcmp(%0,%1) \
                 (varSet(%0, 1), varGet(%1) == varSet(%0, 0))
 #define   XXX::%0(%1) 	forward %0(%1);\
-				public %0(%1)          
+				public %0(%1)   
 
 main()
 {

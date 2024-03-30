@@ -17,23 +17,12 @@ novo lobby
 /virar
 /pintar
 modularização feita
-
-/clear resolvido
+troca de database
+/clear consertado
 removido /cachoeira
 
 
-Admin_Permission(playerid, level)
-{
-	if (Player[playerid][pAdmin] < level)
-	{
-		ShowPlayerNotification(playerid, 0xFF5555FF, 5000, -1, "ERRO", "Voc� n�o possui permiss�o para usar este comando.");
-		return false;
-	}
-
-	return true;
-}
-
-
-- conferir validação "daradmin" 
 - conferir validação "setskin" 
-- corrigir salvamento de vida e colete ( account > index )
+- corrigir Specting ao logar
+- corrigir /daradmin
+- ativar ant cheat

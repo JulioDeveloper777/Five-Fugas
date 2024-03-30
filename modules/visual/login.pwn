@@ -266,9 +266,10 @@ stock LoadLoginTextDraw(playerid)
         
         PlayerTextDrawShow(playerid, VisualLogin[playerid][i]);
 	}
-	// TogglePlayerSpectating(playerid, true);
+	SelectTextDraw(playerid, 0x878787FF);
+	TogglePlayerSpectating(playerid, 1);
 	PlayerTextDrawSetString(playerid, VisualLogin[playerid][2], PlayerName(playerid));
-	return true;
+	return 1;
 }
 
 stock UnloadLoginTextDraw(playerid)
@@ -280,6 +281,5 @@ stock UnloadLoginTextDraw(playerid)
         
         PlayerTextDrawDestroy(playerid, VisualLogin[playerid][i]);
 	}
-	// TogglePlayerSpectating(playerid, false);
-	return true;
+	return 0;
 }
