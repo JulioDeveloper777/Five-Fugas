@@ -1,5 +1,5 @@
 gamemodes/rus.txt
-server_log.txt
+./server_log.txt
 scriptfiles/*
 *rus.txt
 *.amx

@@ -237,3 +237,92 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [17:29:07] [connection] incoming connection: 127.0.0.1:54058 id: 0
 [17:29:07] [join] Julio_Developer has joined the server (0:127.0.0.1)
 [17:29:46] [part] Julio_Developer has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:22:02] filterscripts = ""  (string)
+[22:22:02] 
+[22:22:02] Server Plugins
+[22:22:02] --------------
+[22:22:02]  Loading plugin: sscanf.so
+[22:22:02]   Failed.
+[22:22:02]  Loading plugin: streamer.so
+[22:22:02]   Failed.
+[22:22:02]  Loading plugin: discord-connector.so
+[22:22:02]   Failed.
+[22:22:02]  Loaded 0 plugins.
+
+[22:22:02] 
+[22:22:02] Filterscripts
+[22:22:02] ---------------
+[22:22:02]   Loaded 0 filterscripts.
+
+[22:22:02] Script[gamemodes/five.amx]: Run time error 19: "File or function is not found"
+[22:22:02] Number of vehicle models: 0
+[22:22:48] [connection] 127.0.0.1:55399 requests connection cookie.
+[22:22:49] [connection] incoming connection: 127.0.0.1:55399 id: 0
+[22:22:49] [join] Neo_Promic has joined the server (0:127.0.0.1)
+[22:23:03] [part] Neo_Promic has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:45:44] filterscripts = ""  (string)
+[22:45:44] 
+[22:45:44] Server Plugins
+[22:45:44] --------------
+[22:45:44]  Loading plugin: sscanf.so
+[22:45:44]   Failed.
+[22:45:44]  Loading plugin: streamer.so
+[22:45:44]   Failed.
+[22:45:44]  Loading plugin: discord-connector.so
+[22:45:44]   Failed.
+[22:45:44]  Loaded 0 plugins.
+
+[22:45:44] 
+[22:45:44] Filterscripts
+[22:45:44] ---------------
+[22:45:44]   Loaded 0 filterscripts.
+
+[22:45:44] Script[gamemodes/five.amx]: Run time error 19: "File or function is not found"
+[22:45:44] Number of vehicle models: 0
+[22:53:52] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[22:53:57] filterscripts = ""  (string)
+[22:53:57] 
+[22:53:57] Server Plugins
+[22:53:57] --------------
+[22:53:57]  Loading plugin: sscanf.so
+[22:53:57]   Failed.
+[22:53:57]  Loading plugin: streamer.so
+[22:53:57]   Failed.
+[22:53:57]  Loading plugin: discord-connector.so
+[22:53:57]   Failed.
+[22:53:57]  Loaded 0 plugins.
+
+[22:53:57] 
+[22:53:57] Filterscripts
+[22:53:57] ---------------
+[22:53:57]   Loaded 0 filterscripts.
+
+[22:53:57] Script[gamemodes/five.amx]: Run time error 19: "File or function is not found"
+[22:53:57] Number of vehicle models: 0

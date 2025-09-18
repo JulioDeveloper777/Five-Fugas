@@ -1,6 +1,6 @@
 //___________INCLUDES________________//
 #include <a_samp>
-#include <a_mysql>
+// #include <a_mysql>
 #include <YSI_Data/y_iterate>
 #include <YSI_Coding/y_hooks>
 #include <DOF2>
